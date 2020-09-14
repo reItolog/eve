@@ -1,0 +1,49 @@
+<section class="intro rel pen | js-intro">
+  <div class="abs fill z1" data-smooth-item>
+    <img data-lazy-load="/static/bg-gradient.png" class="intro__bg abs top left x y wct | js-intro__bg" alt="">
+    <div class="curve abs left right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1646" height="53" viewBox="0 0 1646 53" class="x y">
+        <path fill="#F2F1F8" fill-rule="evenodd" d="M0,1.77885024 C327.043564,31.2596167 603.547885,46 829.512962,46 C1055.47804,46 1327.64038,31.2596167 1646,1.77885024 L1646,1.77885024 L1646,54 L0,54 Z" transform="translate(0 -1)"/>
+      </svg>
+    </div>
+  </div>
+  <div class="intro__content row rel z3" data-smooth-item>
+    <article id="purpose" class="vid-item rel mb75 s:mb150 | js-intro-content">
+      <header 
+        class="vid-item__head rel z3"
+        data-from='{"yPercent": "-100"}'
+        data-to='{"yPercent": "65"}'  
+      >
+        <h1 class="gpl2 s:lg f25 s:fh1 lh110">
+          <div class="oh"><div class="js-s-line">Goodbye</div></div>
+          <div class="oh white"><div class="js-s-line">to limits.</div></div>
+        </h1>
+      </header>
+      <figure 
+        class="aspect rel pea" 
+        data-gl-id="intro_1" 
+        data-gl-component="PlaneVideo"
+        data-src="/static/Main_Video.mp4"
+        data-lazy-src-m="/static/Main_Video.jpg"
+      >
+        {{ playIcon(url = 'https://player.vimeo.com/external/417039765.hd.mp4?s=bd07b7d22f8816a6274fca20c76df7a4557fa4b5&profile_id=175') }}
+        <ul class="vid-item__infos abs bottom right ph60 pv50 z2 dn s:f">
+          <li class="f fc aie ml45">
+            <div class="label label--dark mb10">2020</div>
+            <div class="label label--light ttu">Shot by Nurture</div>
+            <div class="label label--transparent">Los Angeles</div>
+          </li>
+          <li class="f fc aie ml45">
+            <div class="label label--dark mb10">01:44</div>
+            <div class="label label--light ttu">Post by Everpost</div>
+            <div class="label label--transparent">International</div>
+          </li>
+        <ul>
+      </figure>
+    </article>
+
+    {% set connect = { mb: 's:pb175', id: 'connect' } %}
+    {% include '_connect.njk' %}
+
+  </div>
+</section>

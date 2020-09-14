@@ -1,0 +1,55 @@
+.b{
+
+  &-hero{
+
+    &__badge{
+
+      svg{
+        position: absolute;
+        left: calc(100% + 0.25em);
+        bottom: 60%;
+        width: 0.95rem;
+        height: auto;
+      }
+    }
+  }
+
+  &-item{
+
+    &__photo{
+
+      img{
+        border-radius: 50%;
+      }
+    }
+
+    &__content{
+
+      @media (max-width: $bp-s-max) {
+        margin-top: calc(var(--col) * -1.5);
+      }
+    }
+
+    &__info{
+      
+      @media (max-width: $bp-s-max) {
+        transform: translateY(-50%);
+      }
+    }
+
+    &__thumb{
+
+      @media (min-width: $bp-s) {
+        width: calc(var(--col) * 11 + 8.75rem);
+        margin-right: -8.75rem;       
+      }
+    }
+
+    &__info{
+
+      span{
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.tal, .intro {
+
+  &-r {
+    font-size: 15rem;
+    letter-spacing: -0.05em;
+    will-change: transform;
+
+    &__text{
+      color: $color-purple;
+
+      .is-desktop & {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.intro{
+  margin-top: -150vh;
+
+  &__bg{
+    opacity: 0;
+  }
+
+  &__content{
+    padding-top: 150vh;
+  }
+}

@@ -1,0 +1,81 @@
+.i {
+
+  &-arrow {
+    width: var(--col);
+    height: var(--col);
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+    }  
+
+    .i-arrow-r & {
+      
+      svg{
+        transform: rotate(0);
+      }
+    }
+
+    &-wrap {
+      min-height: var(--col);
+    }
+  }
+
+  &-check {
+    --size: 1.5rem;
+
+    width: var(--size);
+    min-width: var(--size);
+    height: auto;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }  
+
+    @media (min-width: $bp-s) {
+      --size: 1.25rem;
+    }
+
+    .expect-list & {
+      position: absolute;
+      top: auto;
+      bottom: 100%;
+      left: 0;  
+
+      @media (min-width: $bp-s) {
+        --size: 2rem; 
+        
+        top: 0.3em;
+        bottom: auto;
+      }
+    }
+  }
+
+  &-play{
+    --size: 4.9rem;
+
+    @media (min-width: $bp-s) {
+      --size: 8rem;
+
+      &.--s{
+        --size: 7rem;
+      }      
+    }
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: var(--size);
+    width: var(--size);
+    will-change: transform;
+    z-index: 3;
+
+    svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

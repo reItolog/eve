@@ -1,0 +1,22 @@
+<article class="b-item mb60 s:mb85" data-smooth-item>
+  <a href="/blog/{{ item.slug }}" class="row f fw">
+    <figure class="b-item__photo rel col3 s:col1">
+      <img src="{{ item.author[0].photo.url }}" class="col3 s:col1" alt="{{ item.author[0].name }}">
+    </figure>
+    <div class="b-item__content f fc ais s:col11 s:gpl1 s:gpr1">
+      <div class="b-item__info label ttu mb10 gpl4 s:gpl0">
+        <span class="fw500">{% for cat in item.categories %}{{ cat.name }}{% endfor %}</span>
+        <span class="dark-grey mh5 s:mh10">|</span>
+        <span class="dark-grey">{{ item.length }} minute read</span>
+      </div>
+      <h1 class="b-item-title pt5 pb15 s:pv0 f21 s:f25 lh110">{{ item.title }}</h1>
+      <div class="dn s:di rel f15 u-line-f mta">
+        {{ arrowSmall() }}View article
+      </div>
+    </div>
+    <figure class="b-item__thumb rel x">
+      <div class="aspect" style="--aspect: 53%"></div>
+      <img data-lazy-src="{{ item.featuredImage.url }}?w=1000" class="abs top left x y o-cover wct" alt="">
+    </figure>
+  </a>
+</article>

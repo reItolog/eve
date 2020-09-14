@@ -1,0 +1,56 @@
+{% from "_macros/btn.njk" import btn %}
+
+<header class="sh fix top left x pen pt15 s:pt25 z10">
+  <div class="f jcb">
+    <a href="/" class="site-logo pea">
+      <img src="/static/logo.svg" alt="Everpost">
+    </a>
+    <div class="head__nav f rel">
+      <div class="sh__line dn s:db abs left x | js-sh-line"></div>
+      <ul class="sm f aic s:ais | js-sm-list">
+        <li class="dn s:db">
+          <a href="" class="sm-link rel pea is-active | js-sm-link" data-anchor="#purpose">
+            <span class="sm-link__count db">01</span>
+            <span class="sm-link__label">Purpose</span>
+          </a>
+        </li>
+       <li class="dn s:db">
+          <a href="" class="sm-link rel pea | js-sm-link" data-anchor="#how-it-works">
+            <span class="sm-link__count db">02</span>
+            <span class="sm-link__label">How It Works</span>
+          </a>
+        </li>
+        <li class="dn s:db">
+          <a href="" class="sm-link rel pea | js-sm-link" data-anchor="#pricing">
+            <span class="sm-link__count db">03</span>
+            <span class="sm-link__label">Packages</span>
+          </a>
+        </li>
+        <li class="dn s:db">
+          <a href="" class="sm-link rel pea | js-sm-link" data-anchor="#proof">
+            <span class="sm-link__count db">04</span>
+            <span class="sm-link__label">Proof</span>
+          </a>
+        </li>
+        <li class="dn s:db">
+          <a href="" class="sm-link rel pea | js-sm-link" data-anchor="#talent">
+            <span class="sm-link__count db">05</span>
+            <span class="sm-link__label">Talent</span>
+          </a>
+        </li>
+        <li>
+          <a href="/blog" class="sm-link rel pea">
+            <span class="sm-link__count dn s:db">06</span>
+            <span class="sm-link__label rel">{{ badgeSVG(id = 'badge-1') }}Blog</span>
+          </a>
+        </li>
+        <li class="db s:dn" aria-hidden="true">
+          <button type="button" class="sm-link rel pea | js-to-connect" data-anchor="#connect">
+            <span class="sm-link__label rel">Join waitlist</span>
+          </button>
+        </li>
+      </ul>
+      {{ btn(id = 1, text = 'Join Waitlist', classes = 'sh__btn dn s:db', anchor = true) }}
+    <div>
+  </div>
+</header>

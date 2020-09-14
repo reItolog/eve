@@ -1,0 +1,132 @@
+{% from "_macros/proof.njk" import proofSlide %}
+
+<section id="proof" class="proof pb75 s:pb100 bg-white rel z3 | js-proof" data-smooth-item>
+  <div class="row lg label ttu mb5 rel">
+    {{ arrow() }}
+    Featured work
+  </div>
+  <div class="row lg">
+    <header class="f">
+      <h1 class="f20 s:fh2 x s:col10">{{ home.featuredTitle }}</h1>
+    </header>
+  </div>
+
+  <div class="c-drag rel | js-proof-draggable">
+    <div class="row lg rel mt50">
+      <div class="proof-slides f | js-proof-slides">
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              <img data-lazy-load="/static/bestof/01_avery.jpg" alt="">
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/385133365.hd.mp4?s=231de4a6bbc036363c35a7678b3329ee08cc9285&profile_id=175') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:36</div>
+              <h1 class="f21">Avery</h1>
+              <h2 class="f15">Behind The Label</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Advertisement</h3>
+              <p class="a-content__desc f085">Live action footage + 2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              <img data-lazy-load="/static/bestof/02_kwikset.jpg" alt="">
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/414950530.hd.mp4?s=9a7bc1b54ba992d2a7d60ba8e2f899b1ed8e7cba&profile_id=175') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:12</div>
+              <h1 class="f21">Kwikset</h1>
+              <h2 class="f15">Aura</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Product video</h3>
+              <p class="a-content__desc f085">Live action footage + 2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              <img data-lazy-load="/static/bestof/03_jozy.jpg" alt="">
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/242968433.hd.mp4?s=482513a8195107c1ecbff0c804f15a55accabe36&profile_id=175') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:00</div>
+              <h1 class="f21">Puma</h1>
+              <h2 class="f15">Jozy Altidore</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Profile video</h3>
+              <p class="a-content__desc f085">Live action footage + 2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" data-lazy-src="/static/bestof/04_nasm.jpg" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/384103835.hd.mp4?s=c0081faa7d2b86d8eb2e1ae229fef9c8c3505586&profile_id=175') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:07</div>
+              <h1 class="f21">NASM</h1>
+              <h2 class="f15">Optima 2019</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Conference video</h3>
+              <p class="a-content__desc f085">Live action footage + 2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" data-lazy-src="/static/bestof/05_segmen.jpg" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/161409473.hd.mp4?s=6a5a362f4398233580e67232da07728500549fcf&profile_id=119') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:12</div>
+              <h1 class="f21">Segment</h1>
+              <h2 class="f15">Sources</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Explainer video</h3>
+              <p class="a-content__desc f085">Live action footage + 2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" data-lazy-src="/static/bestof/06_zevia.jpg" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/234565422.hd.mp4?s=ac98f67c18684ecec59f531cbb8bb71928ed907c&profile_id=175') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:06</div>
+              <h1 class="f21">Zevia</h1>
+              <h2 class="f15">Sugar Facts - Episode 1</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Explainer video</h3>
+              <p class="a-content__desc f085">2D animation</p>
+            </div>
+          </div>
+        </article>
+        <article class="proof-slide gmr1 | js-proof-slide">
+          <div class="col22 s:col9">
+            <figure class="rel oh bg-purple pen" data-lazy-src="/static/bestof/07_lumibella.jpg" draggable="false">
+              <div class="aspect" style="--aspect: 56.25%"></div>
+              {{ playIcon(classes = '--s', url = 'https://player.vimeo.com/external/196815143.hd.mp4?s=94c580207823d46269b448a46ee82799da1b4607&profile_id=119') }}
+            </figure>
+            <div class="a-content gpr2 gpl2 s:gpr1 s:gpl1 rel z2">
+              <div class="label label--light mb5">01:36</div>
+              <h1 class="f21">LumaBella</h1>
+              <h2 class="f15">Cool Mist Technology</h2>
+              <h3 class="a-content__cat f075 ttu mt25">Explainer video</h3>
+              <p class="a-content__desc f085">3D animation</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      {% set NextId = 'btn-next-2' %}
+      {% include '_btn-next.njk' %}
+
+    </div>
+  </div>
+</section>

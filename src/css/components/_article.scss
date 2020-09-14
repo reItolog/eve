@@ -1,0 +1,155 @@
+.a{
+
+  &-hero{
+
+    &__img{
+      margin-right: -8.75rem;
+    }
+  }
+
+  &-fig{
+
+    @media (min-width: $bp-s) {
+      min-width: calc(var(--col) * 21);
+      margin-left: calc(var(--col) * -8);
+    }
+
+    figcaption{
+      opacity: 0.5;
+      order: 2;
+
+      @media (min-width: $bp-s) {
+        order: 1;
+      }
+    }
+
+    &__img{
+      order: 1;
+
+      @media (min-width: $bp-s) {
+        order: 2;
+        width: calc(var(--col) * 15 + 6.25rem);
+        margin-right: -6.25rem;
+      }
+    }
+  }
+
+  &-quote{
+
+    @media (min-width: $bp-s) {
+      width: calc(var(--col) * 13);
+      margin-left: calc(var(--col) * -2);  
+    }
+    
+    blockquote{
+      line-height: 1.6;
+      font-style: normal;
+
+      &:before{
+        content: '“';
+        position: absolute;
+        top: -0.25em;
+        left: -0.55em;
+        font-size: 1.75em;
+        color: $color-purple;
+      }
+    }
+
+    cite{
+      opacity: 0.5;
+      font-style: normal;
+    }
+  }
+
+  &-txt{
+
+    em{
+      font-style: normal;
+    }
+
+    > p,
+    > ul,
+    > ol {
+
+      &:not(:last-child):not(.mb85) {
+        margin-bottom: 2.25rem;
+      }
+    }
+
+    h1, h2, h3, h5, h5{
+      font-size: 1.5rem;
+      color: $color-purple;
+      margin-bottom: 1rem;
+    }
+
+    ul, ol{
+
+      ul, ol{
+        margin-top: 1rem;
+        margin-bottom: 2.25rem;
+      }
+    }
+
+    p, li{
+      color: $color-dark-grey;
+      line-height: 1.8;
+
+      * {
+        line-height: inherit;
+      }
+    }
+
+    li{
+      position: relative;
+      padding-left: 1.75rem;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: calc(0.75em - 4px);
+        left: 0;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: $color-purple;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      li{
+
+        &:before{
+          border: 1px solid $color-purple;
+          background-color: transparent;
+          height: 6px;
+          width: 6px;
+        }
+      }
+    }
+  }
+} 
+
+.author{
+
+  &__photo{
+
+    img{
+      border-radius: 50%;
+    }
+  }
+}
+
+.share{
+
+  a{
+    transition: color .35s $Power1EaseOut;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    &:hover{
+      color: $color-purple;
+    }
+  }
+}

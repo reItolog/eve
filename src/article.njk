@@ -1,0 +1,32 @@
+---
+layout: _layout.njk
+permalink: /blog/{{ article.slug }}/
+pagination:
+  alias: article
+  data: articles
+  size: 1
+renderData:
+  title: "{{ article.title }}"
+---
+
+{% from "_macros/underline.njk" import underline %}
+{% from "_macros/arrow.njk" import arrow %}
+{% from "_macros/arrow-small.njk" import arrowSmall %}
+{% from "_macros/btn.njk" import btn %}
+{% from "_macros/_badge.njk" import badgeSVG %}
+
+<article data-router-view="default" id="article">
+
+  {% include '_blog-header.njk' %}
+  {% include '_blog/_single/_hero.njk' %}
+
+  <div data-smooth-item>
+    {% include '_blog/_single/_blocks.njk' %}
+    {% include '_blog/_single/_links.njk' %}
+  </div>
+
+  {% include '_blog/_single/_foot.njk' %}
+  {% include '_blog/_connect.njk' %}
+  {% include '_site-footer.njk' %}
+
+</article>

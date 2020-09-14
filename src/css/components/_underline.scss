@@ -1,0 +1,63 @@
+.u-line {
+  @include underline-double;
+
+  &-f {
+    @include underline-fill(-0.05em);
+    line-height: 1.3;
+
+    svg{
+      position: absolute;
+      top: -0.1em;
+      left: 100%;
+      width: 0.8rem;
+    }
+  }
+}
+
+.uline{
+  --h: 3px;
+
+  bottom: 0.1em;
+
+  &.--s{
+    --h: 2px;
+
+    bottom: 0.2em;
+  }
+
+  height: var(--h);
+  border-radius: calc(var(--h) * 0.5);
+  left: 0.035em;
+  right: 0.035em;
+
+  &--h1,
+  &--h2,
+  &--h3{
+    right: auto;
+  }
+
+  &--h2,
+  &--h3{
+    opacity: 0;
+  }
+
+  &--h1{
+    left: 0.025em;
+    width: 4.15em;
+  }
+
+  &--h2{
+    width: 4.3em;
+  }
+
+  &--h3{
+    left: auto;
+    right: 0.05em;
+    width: 2.3em;
+  }
+
+  &__inner{
+    border-radius: inherit;
+    background: $color-gradient-1;
+  }
+}

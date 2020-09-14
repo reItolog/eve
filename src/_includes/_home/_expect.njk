@@ -1,0 +1,36 @@
+<section class="expect pv75 s:pv100 bg-white rel z3 s:mtn100" data-smooth-item data-stick-start data-stick-end>
+  <div class="rel">
+    <div class="rel s:abs top left x" data-stick>
+      <div class="row lg label ttu mb5 rel">
+        {{ arrow() }}
+        Services
+      </div>
+      <div class="row lg">
+        <header class="f jcb">
+          <h2 class="f20 s:fh2 mb60 s:mb0 x s:col7">{{ home.servicesTitle }}</h2>
+        </header>
+      </div>
+    </div>
+    <div class="row lg">
+      <ul class="expect-list s:col12 s:gpr1 mla">
+
+        {% for item in home.servicesList %}
+          <li class="rel f ais mb60">
+            {% include '_icons/_check.njk' %}
+            <div class="s:gpl1">
+              <h3 class="f20 s:f21">
+                {{ item.serviceHeading }}
+              </h3>
+              {% if item.serviceText %}
+                <p class="f15 mt15 dark-grey">
+                  {{ item.serviceText }}
+                </p>            
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+</section>

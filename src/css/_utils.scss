@@ -1,0 +1,37 @@
+.lg{
+  
+  @media (min-width: $bp-s) {
+    padding-left: calc(var(--col) * 2);
+  }
+}
+
+.bg-gradient-2{
+  background: $color-gradient-2;
+  will-change: transform;
+}
+
+.c{
+
+  &-drag{
+    cursor: grab;
+  }
+}
+
+.curve{
+  bottom: -0.3rem;
+  transform: scale(1.05);
+  transform-origin: bottom;
+
+  @media (min-width: $bp-s) {
+    bottom: -0.5rem;
+    transform: scale(1);
+  }
+}
+
+.wct{
+  will-change: transform;
+}
+
+.fsn{
+  font-style: normal;
+}

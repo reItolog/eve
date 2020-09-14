@@ -1,0 +1,28 @@
+.tm{
+
+  &__info{
+    order: 1;
+
+    @media (min-width: $bp-s) {
+      order: 2;
+    }
+  }
+
+  &__content{
+    order: 2;
+
+    @media (min-width: $bp-s) {
+      order: 1;
+    }
+  }
+
+  &__icon{
+    width: 6rem;
+    transform: translate(-85%, -22.5%);
+
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

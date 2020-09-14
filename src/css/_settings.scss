@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'beau';
+  font-display: swap;
+  src: url('/static/fonts/BeausiteClassicWeb-Clear.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'beau';
+  font-display: swap;
+  src: url('/static/fonts/BeausiteClassicWeb-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+$CustomEaseOne: cubic-bezier(0.57, 0, 0, 1);
+
+$Power1EaseIn: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$Power1EaseOut: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$Power1EaseInOut: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+$Power2EaseIn: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$Power2EaseOut: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$Power2EaseInOut: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+$Power3EaseIn: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$Power3EaseOut: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$Power3EaseInOut: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+$Power4EaseIn: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$Power4EaseOut: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$Power4EaseInOut: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+$CircEaseIn: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$CircEaseOut: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$CircEaseInOut: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+$ExpoEaseIn: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$ExpoEaseOut: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$ExpoEaseInOut: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+$SineEaseIn: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$SineEaseOut: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$SineEaseInOut: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+$color-base-white: #fff;
+$color-white: #f2f1f8;
+$color-black: #14022b;
+$color-dark-grey: #14022bc7;
+
+$color-purple: #6042ff;
+$color-purple-light: #ece9f8;
+$color-pink-1: #b601ff;
+$color-pink-2: #b601ff;
+
+$color-gradient-1: linear-gradient(
+  128deg,
+  #{$color-purple} 0%,
+  #{$color-pink-1} 100%,
+  #{$color-pink-2} 100%
+);
+$color-gradient-2: linear-gradient(
+  108deg,
+  #{$color-purple} 0%,
+  #{$color-pink-1} 90%,
+  #{$color-pink-2} 17%
+);
+
+$colors: (
+  'black': $color-black,
+  'dark-grey': $color-dark-grey,
+  'base-white': $color-base-white,
+  'white': $color-white,
+  'purple': $color-purple,
+  'purple-light': $color-purple-light,
+  'pink-1': $color-pink-1,
+  'pink-2': $color-pink-2,
+) !default;
+
+$font-1: 'beau';
+$font-2: 'beau';
+$font-stacks: (
+  'font-1': $font-1,
+  'font-2': $font-2,
+) !default;
+
+$font-sizes: (
+  '0': 0rem,
+  '075': 0.75rem,
+  '085': 0.85rem,
+  '10': 1rem,
+  '13': 1.3rem,
+  '15': 1.5rem,
+  '18': 1.8rem,
+  '20': 2rem,
+  '21': 2.1rem,
+  '25': 2.5rem,
+  'h2': 2.85rem,
+  'h1': 3.9rem,
+  'h1m': 8.5vw,
+) !default;
+
+$line-heights: (
+  '100': 1,
+  '110': 1.1,
+  '120': 1.2,
+  '130': 1.3,
+  '140': 1.4,
+  '160': 1.6,
+  '180': 1.8,
+) !default;
+
+$bp-xs: 415px;
+$bp-xs-max: calc(#{$bp-xs} - 1px);
+
+$bp-s: 650px;
+$bp-s-max: calc(#{$bp-s} - 1px);
+
+$breakpoints: (
+  xs: $bp-xs,
+  s: $bp-s,
+  m: 850px,
+  l: 1025px,
+  xl: 1440px,
+) !default;
+
+:root {
+  --size: 440;
+  --max-width: calc(100vw - 3.5rem);
+  --cols: 23;
+  --col: calc(var(--max-width) / var(--cols));
+}
+
+@media (min-width: $bp-s) {
+  :root {
+    --size: 1640;
+    --max-width: 85rem;
+  }
+}

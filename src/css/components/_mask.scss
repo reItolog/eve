@@ -1,0 +1,23 @@
+.mask{
+
+  &__circle{
+    --size: 8rem;
+
+    height: var(--size);
+    width: var(--size);
+    transform-origin: bottom;
+
+    svg{
+      will-change: transform;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__outline{
+    opacity: 0;
+  }
+
+  &__clock{
+    transform: scale(0.975);
+  }
+}

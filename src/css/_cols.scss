@@ -1,0 +1,107 @@
+$grid: (
+  '0': 0,
+  '1': calc(var(--col) * 1),
+  '2': calc(var(--col) * 2),
+  '3': calc(var(--col) * 3),
+  '4': calc(var(--col) * 4),
+  '5': calc(var(--col) * 5),
+  '6': calc(var(--col) * 6),
+  '7': calc(var(--col) * 7),
+  '8': calc(var(--col) * 8),
+  '9': calc(var(--col) * 9),
+  '10': calc(var(--col) * 10),
+  '11': calc(var(--col) * 11),
+  '12': calc(var(--col) * 12),
+  '13': calc(var(--col) * 13),
+  '14': calc(var(--col) * 14),
+  '15': calc(var(--col) * 15),
+  '16': calc(var(--col) * 16),
+  '17': calc(var(--col) * 17),
+  '18': calc(var(--col) * 18),
+  '19': calc(var(--col) * 19),
+  '20': calc(var(--col) * 20),
+  '21': calc(var(--col) * 21),
+  '22': calc(var(--col) * 22),
+);
+
+@mixin gc {
+  @each $name, $value in $grid {
+    &#{$name} {
+      width: $value;
+    }
+  }
+}
+
+@mixin gpl {
+  @each $name, $value in $grid {
+    &#{$name} {
+      padding-left: $value;
+    }
+  }
+}
+
+@mixin gpr {
+  @each $name, $value in $grid {
+    &#{$name} {
+      padding-right: $value;
+    }
+  }
+}
+
+@mixin gml {
+  @each $name, $value in $grid {
+    &#{$name} {
+      margin-left: $value;
+    }
+  }
+}
+
+@mixin gmr {
+  @each $name, $value in $grid {
+    &#{$name} {
+      margin-right: $value;
+    }
+  }
+}
+
+.col{
+  @include gc;
+}
+
+.gpl{
+  @include gpl;
+}
+
+.gpr{
+  @include gpr;
+}
+
+.gml{
+  @include gml;
+}
+
+.gmr{
+  @include gmr;
+}
+
+@media (min-width: $bp-s) {
+  .s\:col{
+    @include gc;
+  }
+  
+  .s\:gpl{
+    @include gpl;
+  }
+  
+  .s\:gpr{
+    @include gpr;
+  }
+  
+  .s\:gml{
+    @include gml;
+  }
+  
+  .s\:gmr{
+    @include gmr;
+  }
+}

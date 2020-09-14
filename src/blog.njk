@@ -1,0 +1,26 @@
+---
+layout: _layout.njk
+title: Blog
+---
+
+{% set counter = 0 %}
+
+{% from "_macros/underline.njk" import underline %}
+{% from "_macros/arrow.njk" import arrow %}
+{% from "_macros/arrow-small.njk" import arrowSmall %}
+{% from "_macros/btn.njk" import btn %}
+{% from "_macros/_badge.njk" import badgeSVG %}
+
+<article data-router-view="default" id="blog">
+
+  {% include '_blog-header.njk' %}
+  {% include '_blog/_hero.njk' %}
+
+  {% for item in articles %}
+    {% include '_blog/_article.njk' %}
+  {% endfor %}
+
+  {% include '_blog/_connect.njk' %}
+  {% include '_site-footer.njk' %}
+
+</article>

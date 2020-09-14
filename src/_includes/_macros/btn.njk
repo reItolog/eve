@@ -1,0 +1,35 @@
+{% macro btn(id = 1, text = 'lorem ipsum', classes = 'db', anchor = false) %}
+  {% if anchor != false %}
+    <button type="button" class="btn {{ classes }} rel pea" data-anchor="#connect">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="53" viewBox="0 0 176 53">
+        <defs>
+          <linearGradient id="{{ id }}_group-7-copy-a" x1="0%" x2="100%" y1="46.798%" y2="53.531%">
+            <stop offset="0%" stop-color="#6042FF"/>
+            <stop offset="100%" stop-color="#B601FF"/>
+          </linearGradient>
+          <rect id="{{ id }}_group-7-copy-b" width="173" height="50" x=".463" y=".5" rx="25"/>
+        </defs>
+        <use fill="none" fill-rule="evenodd" stroke="url(#{{ id }}_group-7-copy-a)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1.387)" xlink:href="#{{ id }}_group-7-copy-b"/>
+      </svg>
+      <div class="btn__txt abs fill f aic jcc z2">
+        {{ text }}
+      </div>
+    </button>
+  {% else %}
+    <a href="/" class="btn {{ classes }} rel pea">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="53" viewBox="0 0 176 53">
+        <defs>
+          <linearGradient id="{{ id }}_group-7-copy-a" x1="0%" x2="100%" y1="46.798%" y2="53.531%">
+            <stop offset="0%" stop-color="#6042FF"/>
+            <stop offset="100%" stop-color="#B601FF"/>
+          </linearGradient>
+          <rect id="{{ id }}_group-7-copy-b" width="173" height="50" x=".463" y=".5" rx="25"/>
+        </defs>
+        <use fill="none" fill-rule="evenodd" stroke="url(#{{ id }}_group-7-copy-a)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1.387)" xlink:href="#{{ id }}_group-7-copy-b"/>
+      </svg>
+      <div class="btn__txt abs fill f aic jcc z2">
+        {{ text }}
+      </div>
+    </a>
+  {% endif %}
+{% endmacro %}

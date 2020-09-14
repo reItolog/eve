@@ -1,0 +1,87 @@
+@mixin fluid($properties, $value) {
+  @each $property in $properties {
+    #{$property}: calc(#{$value} * (100vw / var(--size)));
+  }
+}
+
+@mixin fill() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin underline-fill($bottom: 0) {
+
+  &:after, &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    width: 100%;
+    max-width: 2rem;
+    height: 2px;
+    background-color: $color-purple;
+    will-change: transform;
+  }
+
+  &:before{
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.75s $CustomEaseOne;
+    z-index: 2;
+  }
+
+  &:after{
+    opacity: 0.25;
+  }
+
+  &:hover{
+
+    &:before{
+      transform: scaleX(.99);
+    }
+  }
+}
+
+@mixin underline-double ($bottom: 0) {
+
+  &:after, &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.75s $CustomEaseOne;
+    will-change: transform;
+  }
+
+  &:before{
+    transition-delay: 0s;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:after{
+    transition-delay: .25s;
+    transform-origin: right;
+  }
+
+  &:hover{
+
+    &:before{
+      transition-delay: .25s;
+      transform: scaleX(1);
+    }
+
+    &:after{
+      transition-delay: 0s;
+      transform: scaleX(0);
+    }
+  }
+}

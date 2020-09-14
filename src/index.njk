@@ -1,0 +1,28 @@
+---
+layout: _layout.njk
+title: Home
+---
+
+{% set counter = 0 %}
+
+{% from "_macros/play.njk" import playIcon %}
+{% from "_macros/underline.njk" import underline %}
+{% from "_macros/arrow.njk" import arrow %}
+{% from "_macros/arrow-small.njk" import arrowSmall %}
+{% from "_macros/_badge.njk" import badgeSVG %}
+
+<article data-router-view="home" id="home" class="js-gl">
+
+  {% include '_site-header.njk' %}
+  {% include '_home/_hero.njk' %}
+  {% include '_home/_intro.njk' %}
+  {% include '_home/_how-it-works.njk' %}
+  {% include '_home/_expect.njk' %}
+  {% include '_home/_pricing.njk' %}
+  {% include '_home/_proof.njk' %}   
+  {% include '_home/_talent.njk' %}
+  {% include '_home/_about.njk' %}   
+  {% include '_home/_testimonials.njk' %}
+  {% include '_site-footer.njk' %}
+
+</article>

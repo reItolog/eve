@@ -1,0 +1,25 @@
+{% macro proofSlide(
+  img = '/static/bestof/01_avery.jpg', 
+  clock = '01:26',
+  h1 = 'Avery',
+  h2 = 'Behind The label',
+  cat = 'Advertisement',
+  desc = 'Live action footage + 2d animation'
+) %}
+<article class="proof-slide s:gmr1 | js-proof-slide">
+  <div class="s:col9">
+    <figure class="rel oh">
+      <div class="aspect" style="--aspect: 56.25%"></div>
+      <img src="{{ img }}" class="abs top left x y o-cover" alt="" draggable="false">
+      {{ playIcon(classes = '--s') }}
+    </figure>
+    <div class="a-content s:gpr1 s:gpl1 rel z2">
+      <div class="label label--light">{{ clock }}</div>
+      <h1 class="f21">{{ h1 }}</h1>
+      <h2 class="f15">{{ h2 }}</h2>
+      <h3 class="a-content__cat f075 ttu mt25">{{ cat }}</h3>
+      <p class="a-content__desc f085">{{ desc }}</p>
+    </div>
+  </div>
+</article>
+{% endmacro %}

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/everpost.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/components/Stripe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/utils/useFetch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_header.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_layout.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_layout.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-footer.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-footer.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-header.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/highway/renderers/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/highway/renderers/Default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hEZgkVGH4ssEkLB79kkY8wU0XZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Twig" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/js/utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.serve">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="" />
+      <created>1599578325274</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599578325274</updated>
+      <workItem from="1599578326496" duration="1536000" />
+      <workItem from="1599635005553" duration="21067000" />
+      <workItem from="1599720511883" duration="546000" />
+      <workItem from="1599721064579" duration="11000" />
+      <workItem from="1599721082860" duration="29069000" />
+      <workItem from="1599807188849" duration="29225000" />
+      <workItem from="1600065587430" duration="16000" />
+      <workItem from="1600065618203" duration="27071000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="includedJSSourcePackages">
+      <set>
+        <option value="@stripe/stripe-js" />
+      </set>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599721055869">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599721055869" />
+    <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl" timestamp="1599721025249">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl/72.27.2488.1413@72.27.2488.1413" timestamp="1599721025249" />
+    <state width="1313" height="99" key="GridCell.Tab.0.bottom" timestamp="1600094418301">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state width="1313" height="99" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
+    <state width="1313" height="99" key="GridCell.Tab.0.center" timestamp="1600094418301">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state width="1313" height="99" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
+    <state width="1313" height="99" key="GridCell.Tab.0.left" timestamp="1600094418300">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state width="1313" height="99" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418300" />
+    <state width="1313" height="99" key="GridCell.Tab.0.right" timestamp="1600094418301">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state width="1313" height="99" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
+    <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog" timestamp="1599748835686">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599748835686" />
+    <state x="805" y="368" width="1022" height="737" key="SettingsEditor" timestamp="1599722022868">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="805" y="368" width="1022" height="737" key="SettingsEditor/72.27.2488.1413@72.27.2488.1413" timestamp="1599722022868" />
+    <state x="172" y="127" width="1105" height="1208" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599736035298">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="172" y="127" width="1105" height="1208" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599736035298" />
+    <state x="969" y="351" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599831429453">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="969" y="351" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.2488.1413@72.27.2488.1413" timestamp="1599831429453" />
+    <state x="980" y="342" key="run.anything.popup" timestamp="1599830642913">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="980" y="342" key="run.anything.popup/72.27.2488.1413@72.27.2488.1413" timestamp="1599830642913" />
+    <state x="1601" y="349" width="672" height="678" key="search.everywhere.popup" timestamp="1599579279112">
+      <screen x="72" y="27" width="2488" height="1413" />
+    </state>
+    <state x="1601" y="349" width="672" height="678" key="search.everywhere.popup/72.27.2488.1413@72.27.2488.1413" timestamp="1599579279112" />
+  </component>
+</project>

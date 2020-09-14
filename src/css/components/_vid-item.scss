@@ -1,0 +1,20 @@
+.vid-item {
+  --aspect: 65%;
+
+  @media (min-width: $bp-s) {
+    --aspect: 44.7%;
+  }
+
+  &__head {
+    height: calc(var(--col) * 4);
+
+    @media (min-width: $bp-s) {
+      height: calc(var(--col) * 1.5);
+    }
+  }
+
+  img{
+    @include fill;
+    object-fit: cover;
+  }
+}

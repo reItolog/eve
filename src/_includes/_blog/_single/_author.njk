@@ -1,0 +1,11 @@
+<article class="author mb30 s:mb0 f ais">
+  <figure class="author__photo rel col3 s:col1">
+    <div class="aspect" style="--aspect: 100%"></div>
+    <img src="{{ article.author[0].photo.url }}" class="abs top left x y o-cover" alt="{{ article.author[0].name }}">
+  </figure>
+  <div class="author__content col20 s:col7 gpl1 s:gpr1">
+    <div class="label ttu mb5">Author</div>
+    <h1 class="f15 mb10">{{ article.author[0].name }}</h1>
+    <p class="f085 lh180">{{ article.author[0].bio }}</p>
+  </div>
+</article>

@@ -1,0 +1,34 @@
+<section class="pb75 s:pb100 rel bg-white z3" data-smooth-item>
+  <div class="row lg label ttu mb5 rel i-arrow-r">
+    {{ arrow() }}
+    Testimonials
+  </div>
+  <div class="row lg">
+    <h1 class="f20 s:fh2 x s:col7">{{ home.testimonialsTitle }}</h1>
+
+    {% for t in testimonials %}
+      <article class="tm f fc s:fr mt45">
+        <div class="tm__info rel x s:col9">
+          <figure class="tm__img rel aspect bg-purple" style="--aspect: 53.7%">
+            <img data-lazy-src="{{ t.image.url }}" class="abs top left x y o-cover" alt="">
+          </figure>
+          <div class="a-content s:gpr1 s:gpl1 rel z2 mb15 s:mb0">
+            <div class="dn s:db label label--light mb5 ttu">Client</div>
+            <h1 class="f21">{{ t.name }}</h1>
+            <h2 class="f15">{{ t.company }}</h2>
+            <h3 class="a-content__cat dn s:db f075 ttu mt25">Role</h3>
+            <p class="a-content__desc dn s:db f085">{{ t.role }}</p>
+          </div>
+        </div>
+        <div class="tm__content rel s:col10 s:gpr1">
+          <div class="tm__icon dn s:db abs top left | js-bm-d" data-name="testimonial"></div>
+          <blockquote class="f15 m0 dark-grey">{{ t.quote }}</blockquote>
+          <figure class="tm__logo col7 s:col2 mt15 s:mt25">
+            <img src="{{ t.logo.url }}" alt="{{ t.company }}">
+          </figure>
+        </div>
+      </article>
+    {% endfor %}
+
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+layout: _layout.njk
+title: Payment
+---
+
+{% set counter = 0 %}
+
+{% from "_macros/play.njk" import playIcon %}
+{% from "_macros/underline.njk" import underline %}
+{% from "_macros/arrow.njk" import arrow %}
+{% from "_macros/arrow-small.njk" import arrowSmall %}
+{% from "_macros/_badge.njk" import badgeSVG %}
+<article data-router-view="default" id="payment" class="js-gl">
+
+  {% include '_payment-header.njk' %}
+
+{#  {% include '_payment/_intro.njk' %}#}
+  {% include '_payment/_stripe.njk' %}
+  {% include '_payment-footer.njk' %}
+
+</article>

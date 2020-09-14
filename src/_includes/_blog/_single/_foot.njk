@@ -1,0 +1,39 @@
+<div class="row f fc s:fr s:jcb ais mb45 s:mb85" data-smooth-item>
+  {% include '_blog/_single/_author.njk' %}
+  <div class="next x s:col13 f aie">
+    <div class="share col12 s:col4">
+      <div class="label ttu mb5">Share article</div>
+      <ul class="f aic black mln10">
+        <li>
+          <a href="https://twitter.com/intent/tweet?url=https://everpost.com/blog/{{ article.slug }}&text={{ article.title }}" target="_blank" rel="noreferrer" name="twitter" aria-label="twitter" class="wct db ph10">
+            <svg class="icon icon-twitter db">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>          
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://everpost.com/blog/{{ article.slug }}" target="_blank" rel="noreferrer" name="facebook" aria-label="facebook" class="wct db ph10">
+            <svg class="icon icon-facebook db">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>              
+          </a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://everpost.com/blog/{{ article.slug }}&title={{ article.title }}" target="_blank" rel="noreferrer" name="linkedin" aria-label="linkedin" class="wct db ph10">
+            <svg class="icon icon-linkedin db">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg>               
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    {% set nextHref = pagination.nextPageHref if pagination.next else pagination.firstPageHref %}
+    {% set slug = nextHref | split('/') %}
+    {% set nextArticle = articles | find('slug', slug[2]) %}
+
+    <a href="/blog/{{ nextArticle.slug }}" class="rel f15 u-line-f mb10">
+      {{ arrowSmall() }}Next article
+    </a>
+  </div>
+</div>

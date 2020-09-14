@@ -1,0 +1,22 @@
+.proof {
+
+  &-slide{
+
+    img{
+      @include fill;
+      object-fit: cover;
+    }
+  }
+
+  &-slides {
+    user-select: none;
+  }
+
+  &__icon {
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+}

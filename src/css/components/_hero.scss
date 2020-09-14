@@ -1,0 +1,113 @@
+.hero{
+  position: relative;
+  height: 500vw;
+
+  .is-phone.is-portrait & {
+    height: 1000vw;
+  }
+
+  &__inner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--vh) * 100);
+    overflow: hidden;
+
+    .is-desktop & {
+      position: relative;
+    }
+  }
+
+  &__logo{
+    bottom: calc(100% + 2rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-img{
+    --size: 27.5vw;
+    --my: 1;
+    --mx: 1;
+
+    .is-portrait & {
+      --size: 50vw;
+      --my: 2;
+      --mx: 0.75;
+    }
+
+    &__inner{
+      width: var(--size);
+    }
+
+    &:nth-child(6n+1) {
+      margin-top: auto;
+      margin-bottom: calc(12vh * var(--my));
+
+      &:not(:first-child) {
+        margin-left: calc(6rem * var(--mx));
+      }
+    }
+
+    &:nth-child(6n+2) {
+      margin-bottom: auto;
+      margin-top: 0rem;
+      margin-left: calc(-12rem * var(--mx));
+
+      .is-portrait & {
+        margin-top: 12vh;
+      }
+    }
+
+    &:nth-child(6n+3) {
+      margin-top: auto;
+      margin-bottom: -6vh;
+
+      .is-portrait & {
+        margin-bottom: 12vh;
+      }
+    }
+
+    &:nth-child(6n+4) {
+      margin-bottom: auto;
+      margin-top: calc(9vh * var(--my));
+      margin-left: calc(-12rem * var(--mx));
+    }
+
+    &:nth-child(6n+5) {
+      margin-top: auto;
+      margin-bottom: calc(12vh * var(--my));
+      margin-right: calc(6rem * var(--mx));
+    }
+
+    &:nth-child(6) {
+      margin-bottom: auto;
+      margin-top: calc(11vh * var(--my));
+      margin-left: calc(-12rem * var(--mx));
+    }
+  }
+
+  &__title{
+    font-size: 2.6rem;
+    line-height: 1.2;
+
+    @media (min-width: $bp-s) {
+      font-size: 4.75rem;
+
+      .is-portrait.is-tablet & {
+        font-size: 7rem;
+      }
+    }
+  }
+
+  &-progress{
+    --size: 6rem;
+
+    top: calc(100% + 2rem);
+    left: 50%;
+    transform: translateX(-50%);
+    height: var(--size);
+    width: var(--size);
+    cursor: pointer;
+  }
+}

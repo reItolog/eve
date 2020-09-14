@@ -1,0 +1,1 @@
+{% macro underline(text = '', classes = '') %}{% if text == '' %} <span class="uline oh abs bottom {{ classes }}" data-scroll="uline"><span class="uline__inner db abs fill"></span></span>{% else %}<span class="dib rel">{{ text }}<span class="uline oh abs {{ classes }}" data-scroll="uline"><span class="uline__inner db abs fill"></span></span></span>{% endif %}{% endmacro %}

@@ -1,0 +1,10 @@
+<div class="row mb45 s:mb85">
+  <div class="x s:col13 s:mla">
+    <h4 class="label purple ttu mb5">Research links</h4>
+    <ul>
+      {% for link in article.links %}
+        <li><a href="{{ link }}" class="f085" target="_blank" rel="noopener noreferrer">{{ link }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

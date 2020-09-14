@@ -1,0 +1,195 @@
+.sh{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+
+  @media (min-width: $bp-s) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;    
+  }
+
+  &__line{
+    top: -2.5rem;
+    height: 0.25rem;
+    background: $color-gradient-1;
+    transform-origin: left;
+    will-change: transform;
+    opacity: 0;
+  }
+
+  &__btn{
+
+    @media (min-width: $bp-s) {
+      margin-top: 0.15rem;
+    }
+  }
+}
+
+.sm {
+  will-change: transform;
+
+  @media (min-width: $bp-s) {
+    margin-right: 0.85rem;
+  }
+
+  li {
+    margin-right: 2.65rem;
+
+    @media (max-width: $bp-s-max) {
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    cursor: pointer;
+
+    @media (min-width: $bp-s) {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    &__count{
+      opacity: 0.001;
+      font-size: 0.65em;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.7em;
+      transition: opacity .35s ease;
+
+      .is-desktop .sm-link.is-active & {
+        opacity: 0.35;
+      }
+    }
+
+    &__label{
+      display: block;
+      letter-spacing: 0.04em;
+      transition: color .35s ease;
+      color: $color-dark-grey;
+
+      .is-desktop .sm-link.is-active & {
+        color: $color-purple;
+      }
+
+      @media (hover: hover) {
+
+        &:hover{
+          color: $color-purple;
+        }
+      }
+
+      svg{
+        position: absolute;
+        left: calc(100% + 0.25em);
+        bottom: 60%;
+        width: 0.75em;
+        height: auto;
+      }
+    }
+  }
+}
+
+.site-logo{
+
+  img{
+    width: 2.5rem;
+  }
+
+  svg{
+    height: auto;
+
+    &:nth-child(1) {
+      width: 2.5rem;
+    }
+
+    &:nth-child(2) {
+      width: 1.5rem;
+      margin-left: 1rem;
+      opacity: 1;
+    }
+  }
+
+  #blog & {
+
+    svg{
+
+      &:nth-child(2) {
+        width: 1.5rem;
+        margin-left: 1rem;
+        opacity: 0.1;
+      }      
+    }
+  }
+}
+
+.payment_header_logo img {
+    width: 10.5rem;
+}
+.pea.grey_bg {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 10px;
+    line-height: 24px;
+}
+.pea.grey_bg span {
+    font-weight: 600;
+    font-size: 18px;
+}
+.pea.purple_bg {
+    background: rgb(106,58,255);
+    background: linear-gradient(90deg, rgba(106,58,255,1) 0%, rgba(122,46,255,1) 52%, rgba(143,31,255,1) 100%);
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 24px;
+}
+#payment_top {
+    padding-top: 150px;
+    text-align: center;
+}
+#payment_top h1 {
+    color: #37254F;
+    font-size: 35px;
+    margin-bottom: 35px;
+    width: 50%;
+    margin: 0px auto;
+    position: relative;
+	margin-bottom: 50px;
+}
+#payment_top h1 span:after {
+    content: "";
+    position: absolute;
+    background: rgb(106,58,255);
+    background: linear-gradient(90deg, rgba(106,58,255,1) 0%, rgba(122,46,255,1) 52%, rgba(143,31,255,1) 100%);
+    width: 240px;
+    height: 5px;
+    left: 75px;
+    bottom: 0px;
+}
+ul.payment_video_list {
+    margin-bottom: 40px;
+	display: block;
+}
+ul.payment_video_list li {
+    display: inline-block;
+    text-align: center;
+    margin: 0px 20px;
+}
+ul.payment_video_list li .sm-link {
+    font-size: 14px;
+}
+#read-faqs h2 {
+    text-align: center;
+    font-size: 26px;
+	margin-bottom: 30px;
+}
+.faq_top_content {
+    text-align: center;
+    margin-bottom: 35px;
+}
+

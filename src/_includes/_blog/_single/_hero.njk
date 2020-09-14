@@ -1,0 +1,19 @@
+<div class="a-hero pt100 pb30 s:pt150 s:pb85" data-smooth-item>
+  <div class="row">
+    <div class="x s:gpl2 s:col17">
+      <div class="b-item__info label ttu mb5 s:mb10">
+        <span>{% for cat in article.categories %}{{ cat.name }}{% endfor %}</span>
+        <span class="dark-grey mh10">|</span>
+        <span class="dark-grey">{{ article.length }} minute read</span>
+      </div>
+      <h1 class="f21 s:fh1 lh110">{{ article.title }}</h1>
+    </div>
+    <div class="f fc s:fr x mt30 s:mt60">
+      {% include '_blog/_single/_author.njk' %}
+      <figure class="a-hero__img rel x">
+        <div class="aspect" style="--aspect: 53%"></div>
+        <img src="{{ article.featuredImage.url }}?w=1000" class="abs top left x y o-cover wct" alt="">
+      </figure>
+    </div>
+  </div>
+</div>

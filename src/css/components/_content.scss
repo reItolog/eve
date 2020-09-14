@@ -1,0 +1,22 @@
+.a{
+  &-content {
+    margin-top: -2.4rem;
+
+    @media (max-width: $bp-s-max) {
+
+      .tm & {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__cat {
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.15rem;
+    }
+  
+    &__desc {
+      opacity: 0.5;
+    }
+  }
+}

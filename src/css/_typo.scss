@@ -1,0 +1,38 @@
+.label{
+  color: $color-purple;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+
+  &:not(.label--l) {
+    font-size: 0.75rem;
+
+    @media (min-width: $bp-s) {
+      font-size: 0.65rem;
+    }
+  }
+
+  &--light{
+    color: $color-white;
+  }
+
+  &--dark{
+    color: $color-black;
+  }
+
+  &--transparent{
+    color: rgba($color-white, 0.5);
+  }
+
+  &--l{
+    font-size: 1rem;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

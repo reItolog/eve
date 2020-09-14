@@ -1,0 +1,76 @@
+{% from "_macros/btn.njk" import btn %}
+
+<section id="pricing" class="pricing pb75 s:pb100 rel bg-white z3 | js-pricing js-menu-anchor" data-smooth-item>
+  <div class="row lg label ttu mb5 rel">
+    {{ arrow() }}
+    Packages
+  </div>
+  <div class="row lg">
+    <header class="s:f jcb">
+      <h1 class="f20 s:fh2 x s:col7 mb25 s:mb0">{{ home.packagesTitle }}</h1>
+      <p class="f15 x s:col11 s:gpr1 dark-grey">
+        {{ home.packagesText }}
+      </p>
+    </header>
+  </div>
+
+  <div class="row lg f jce mt35 s:mt25">
+    <nav class="pricing-bullets x s:col11">
+      <ul class="f">
+        <li>
+          <button type="button" class="purple tl | js-pricing-bullet">Post</button>
+        </li>
+        <li>
+          <button type="button" class="purple tl | js-pricing-bullet">Animation</button>
+        </li>
+        <li>
+          <button type="button" class="purple tl | js-pricing-bullet">Custom</button>
+        </li>
+      </ul>
+      <div class="pricing-line rel mt10 s:mt20 | ">
+        <div class="pricing-line__handle abs left bottom s:col2 | js-pricing-handle"></div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="c-drag rel | js-pricing-draggable">
+    <div class="row lg rel mt50">
+      <div class="pricing-slides f | js-pricing-slides">
+
+        {% for package in packages %}
+          <article class="pricing-slide {{ '' if loop.last else 'gmr1' }} bg-base-white | js-pricing-slide">
+            <div class="col22 s:col9">
+              <figure class="rel oh">
+                <div class="aspect" style="--aspect: 56%"></div>
+                <img data-lazy-load="{{ package.image.url }}" class="abs top left x y o-cover" alt="" draggable="false">
+                {{ playIcon(classes = '--s', url = package.videoUrl) }}
+              </figure>
+              <div class="gpr2 gpl2 s:gpr1 s:gpl1 pv30 s:pv40">
+                <h1 class="pricine-slide__title f15 purple mb10">
+                  {{ package.title }}
+                </h1>
+                <p class="f15">
+                  {{ package.text }}
+                </p>
+                <ul class="pricing-slide-list mt25">
+
+                  {% for item in package.list %}
+                    <li class="rel f ais">{% include '_icons/_check.njk' %}<p class="pl10 s:pl15">{{ item }}</p></li>
+                  {% endfor %}
+
+                <div class="pricing-slide__cta f jcc pt40">
+                  {{ btn(id = '4', text = 'Learn More', anchor = true) }}
+                </div>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+
+      </div>
+
+      {% set NextId = 'btn-next-1' %}
+      {% include '_btn-next.njk' %}
+
+    </div>
+  </div>
+</section>

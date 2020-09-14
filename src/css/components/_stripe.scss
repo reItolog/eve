@@ -1,0 +1,356 @@
+$borderRadius: 6px;
+$boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
+
+.App-Overview, .App-Payment {
+  position: relative;
+  padding: 0 16px 16px;
+  width: 50%;
+  flex: 2;
+  flex-basis: 300px;
+}
+
+.App-Footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 12px 0;
+
+  span {
+    font-size: .7rem;
+  }
+
+  @media (max-width: $bp-xs) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.mr3 {
+  margin-right: 12px;
+}
+
+.Text-color--gray400 {
+  color: rgba(26, 26, 26, .5);
+}
+
+.Footer-PoweredBy {
+  @media (min-width: 992px) {
+    padding: 0 16px 0 0;
+    border-right: 1px solid rgba(26, 26, 26, .1);
+    width: auto;
+    text-align: left;
+  }
+}
+
+.Footer-Links {
+  padding: 0 0 0 16px;
+  width: auto;
+  text-align: left;
+
+  @media (max-width: $bp-xs) {
+    text-align: center;
+  }
+
+}
+
+//Preview Section
+.App-Overview {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.overview-title {
+  text-align: left;
+  margin-bottom: 10%;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.overview-image {
+  display: flex;
+  width: 300px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  @media (max-width: $bp-xs) {
+    display: none;
+  }
+}
+
+//
+.payment-text {
+  font-size: 0.8rem;
+  color: grey;
+  margin: 2% 0;
+}
+
+.payment-divider {
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin: 5% 0;
+
+  &::before,
+  &::after {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid grey;
+    flex: 1;
+  }
+
+  &:before {
+    margin-right: 3px;
+  }
+
+  &:after {
+    margin-left: 3px;
+  }
+}
+
+.strip {
+  background: white;
+}
+
+.strip-form {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.app-payment {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+
+.FormFieldInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 5%;
+}
+
+.FormFieldLabel {
+  color: rgba(26, 26, 26, .7);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.CheckoutInput {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 8px 12px;
+  color: rgba(26, 26, 26, .9);
+  font-size: 16px;
+  line-height: 1.5;
+  border: 0;
+  border-radius: $borderRadius;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+  transition: box-shadow .08s ease-in, color .08s ease-in, -webkit-filter 50000s;
+  background: #fff;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: $boxShadow;
+  }
+}
+
+.SubmitButton {
+  background: #593bb7;
+  position: relative;
+  overflow: hidden;
+  height: 44px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(50, 50, 93, .1), 0 2px 5px 0 rgba(50, 50, 93, .1), 0 1px 1px 0 rgba(0, 0, 0, .07);
+  border: 0;
+  outline: none;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  transition: all .2s ease, box-shadow .08s ease-in;
+  backface-visibility: hidden;
+
+}
+
+// CARD INFO
+.CardInformation-content {
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+  border-radius: $borderRadius;
+
+}
+
+.cardNumberContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.FormFieldInput-Icons--Container {
+  padding-right: 6px;
+}
+
+.FormFieldInput-Icons {
+  position: absolute;
+  display: flex;
+  right: 0;
+  padding-right: 8px;
+}
+
+.ContainerCvcContainer {
+  position: relative;
+  width: 50%;
+
+  .FormFieldInput-Icons--Cvs {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 21px;
+    @media (max-width: $bp-xs) {
+      width: 15px;
+      height: 11px
+    }
+  }
+}
+
+.FormFieldInput-IconsIcon {
+  width: 25px;
+  height: 21px;
+  @media (max-width: $bp-xs) {
+    width: 15px;
+    height: 11px
+  }
+}
+
+
+// SELECT COUNTRY
+.countryContainer {
+  border-radius: $borderRadius;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+
+}
+
+.zip-field {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.Select {
+  display: flex;
+  position: relative;
+}
+
+.Select-source {
+  border-top-right-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  padding: 8px 24px 8px 12px;
+  color: rgba(26, 26, 26, .9);
+  line-height: 1.5;
+  border: 0;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+  transition: box-shadow .08s ease-in, color .08s ease-in, filter 50000s, -webkit-filter 50000s;
+  appearance: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: $boxShadow;
+  }
+}
+
+.Select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -6px;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  z-index: 3;
+
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  position: relative;
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  padding: 10px 12px;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+}
+
+.ElementsApp input {
+  font-size: 0.3rem;
+}
+
+.StripeElement.card-number {
+  border-top-right-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+}
+
+.StripeElement.card-expiry {
+  width: 50%;
+  border-radius: 0;
+  border-bottom-left-radius: $borderRadius;
+}
+
+.StripeElement.card-cvc {
+  width: 100%;
+  border-radius: 0;
+  border-bottom-right-radius: $borderRadius;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
+  border: 0;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  z-index: 10;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.cardError {
+  font-size: 13px;
+  color: red;
+  height: 5px;
+}
+
+.CardValidationError {
+  border: 1px solid red;
+  box-shadow: none;
+}
+
+// GPAY BUTTON
+.payment-request-button {
+  background: #000;
+  padding: 5%;
+  border-radius: 4px;
+}
