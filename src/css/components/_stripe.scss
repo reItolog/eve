@@ -305,6 +305,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 }
 
 .StripeElement.card-number {
+  border-radius: 0;
   border-top-right-radius: $borderRadius;
   border-top-left-radius: $borderRadius;
 }
@@ -323,9 +324,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 
 .StripeElement--focus {
   box-shadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
-  border: 0;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+   
   z-index: 10;
 }
 
@@ -346,11 +345,10 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 .CardValidationError {
   border: 1px solid red;
   box-shadow: none;
+  border-radius: $borderRadius;
 }
 
 // GPAY BUTTON
 .payment-request-button {
-  background: #000;
-  padding: 5%;
-  border-radius: 4px;
+  box-shadow: none;
 }

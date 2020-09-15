@@ -5,6 +5,7 @@ export default class {
   cardNumberElement;
   cardCvcElement;
   cardExpiryElement;
+  displayError;
 
   stripe;
 
@@ -32,6 +33,7 @@ export default class {
     this.cardNumberElement = document.getElementById('card-number')
     this.cardExpiryElement = document.getElementById('card-expiry')
     this.cardCvcElement = document.getElementById('card-cvc')
+    this.displayError = document.getElementById('card-errors')
     this.stripe = Stripe('pk_test_51HPO4FKrdDRwnIFxHCzsnj0JRYMGDz4wzEdpCYGMykoX4jxxBXv4MbcVlJWSLKQtElZdzShpgZ5UvS1C9mQGEmwg00u9uMNihW')
     this.elements = this.stripe.elements();
   }
@@ -66,11 +68,22 @@ export default class {
           const name = document.querySelector('input[name="name"]').value;
           const zip = document.querySelector('input[name="zip"]').value;
 
+
           const tokenData = {
             name,
             address_country: country
           }
-          const {token} = await this.stripe.createToken(cardNumber, tokenData);
+          const {error, token} = await this.stripe.createToken(cardNumber, tokenData);
+
+          if (error) {
+            this.validationError(error)
+          } else {
+            this.validationError(null)
+          }
+
+          if (!token) {
+            return
+          }
 
           useFetch(`${this.apiBaseUrl}/payment/create-customer`, {email, name}, 'POST')
             .then((data) => {
@@ -103,6 +116,9 @@ export default class {
                 console.log(e)
               }
 
+            })
+            .then(() => {
+              this.subscriptionSuccess()
             })
             .catch(e => {
               console.log(e)
@@ -141,8 +157,6 @@ export default class {
   createCardElement(type, domElement, ...args) {
     const cardDomElement = document.querySelector(domElement)
 
-    let displayError = document.getElementById('card-errors');
-
     if (cardDomElement) {
       const elements = this.elements;
 
@@ -155,6 +169,10 @@ export default class {
             paymentRequest: paymentRequest,
             style: {
               paymentRequestButton: {
+                type: 'default',
+                // One of 'default', 'book', 'buy', or 'donate'
+                // Defaults to 'default'
+
                 theme: 'dark',
               },
             },
@@ -179,21 +197,15 @@ export default class {
       element.mount(domElement);
 
       element.on('change', (e) => {
-        console.log(e)
-        if (e.error) {
-          this.cardValidation(e.error)
-          displayError.textContent = e.error.message;
-        } else {
-          displayError.textContent = '';
-          this.cardValidation(null)
-        }
+        this.validationError(e.error)
       })
-
       return element;
     }
-
   }
 
+  subscriptionSuccess() {
+    alert('Success')
+  }
 
   cardValidation(error) {
     if (error) {
@@ -204,6 +216,16 @@ export default class {
       this.cardNumberElement.classList.remove('CardValidationError')
       this.cardCvcElement.classList.remove('CardValidationError')
       this.cardExpiryElement.classList.remove('CardValidationError')
+    }
+  }
+
+  validationError(error) {
+    if (error) {
+      this.cardValidation(error)
+      this.displayError.textContent = error.message;
+    } else {
+      this.displayError.textContent = '';
+      this.cardValidation(null)
     }
   }
 

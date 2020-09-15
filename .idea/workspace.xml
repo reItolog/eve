@@ -20,28 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/everpost.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/components/Stripe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/utils/useFetch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_header.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_layout.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_layout.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-footer.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-footer.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-header.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/highway/renderers/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/highway/renderers/Default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/_stripe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/Stripe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Stripe.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +66,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="eleventy:watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eleventy:watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -96,8 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.serve" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.eleventy:watch" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +110,9 @@
       <workItem from="1599807188849" duration="29225000" />
       <workItem from="1600065587430" duration="16000" />
       <workItem from="1600065618203" duration="27071000" />
+      <workItem from="1600100170562" duration="6207000" />
+      <workItem from="1600148073059" duration="561000" />
+      <workItem from="1600148980003" duration="9811000" />
     </task>
     <servers />
   </component>
@@ -149,21 +145,25 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl/72.27.2488.1413@72.27.2488.1413" timestamp="1599721025249" />
-    <state width="1313" height="99" key="GridCell.Tab.0.bottom" timestamp="1600094418301">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state width="1345" height="45" key="GridCell.Tab.0.bottom" timestamp="1600160918871">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1345" height="45" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600160918871" />
     <state width="1313" height="99" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1313" height="99" key="GridCell.Tab.0.center" timestamp="1600094418301">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state width="1345" height="45" key="GridCell.Tab.0.center" timestamp="1600160918869">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1345" height="45" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600160918869" />
     <state width="1313" height="99" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1313" height="99" key="GridCell.Tab.0.left" timestamp="1600094418300">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state width="1345" height="45" key="GridCell.Tab.0.left" timestamp="1600160918868">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1345" height="45" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600160918868" />
     <state width="1313" height="99" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418300" />
-    <state width="1313" height="99" key="GridCell.Tab.0.right" timestamp="1600094418301">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state width="1345" height="45" key="GridCell.Tab.0.right" timestamp="1600160918870">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1345" height="45" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600160918870" />
     <state width="1313" height="99" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
     <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog" timestamp="1599748835686">
       <screen x="72" y="27" width="2488" height="1413" />
@@ -173,9 +173,10 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="805" y="368" width="1022" height="737" key="SettingsEditor/72.27.2488.1413@72.27.2488.1413" timestamp="1599722022868" />
-    <state x="172" y="127" width="1105" height="1208" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599736035298">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600158620343">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1600158620343" />
     <state x="172" y="127" width="1105" height="1208" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599736035298" />
     <state x="969" y="351" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599831429453">
       <screen x="72" y="27" width="2488" height="1413" />
