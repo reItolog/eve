@@ -19,11 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="">
+    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="validation CardInfo">
+      <change afterPath="$PROJECT_DIR$/src/css/components/_payment.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-header.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_stripe.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/_head.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_head.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/components/_stripe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/_talent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_talent.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Stripe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Stripe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +38,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hEZgkVGH4ssEkLB79kkY8wU0XZ" />
@@ -55,7 +67,7 @@
       <recent name="$PROJECT_DIR$/src/js/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="npm.start">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -86,11 +98,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/studio/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.serve" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.eleventy:watch" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -112,8 +136,19 @@
       <workItem from="1600065618203" duration="27071000" />
       <workItem from="1600100170562" duration="6207000" />
       <workItem from="1600148073059" duration="561000" />
-      <workItem from="1600148980003" duration="9811000" />
+      <workItem from="1600148980003" duration="29253000" />
+      <workItem from="1600235067306" duration="165000" />
+      <workItem from="1600235721533" duration="2628000" />
+      <workItem from="1600254566933" duration="3675000" />
     </task>
+    <task id="LOCAL-00001" summary="validation CardInfo">
+      <created>1600162353261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600162353261</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,34 +171,50 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="validation CardInfo" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation CardInfo" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="5" key="#Plugins" timestamp="1600235807355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="5" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1600235807355" />
+    <state x="402" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600179327399">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="154" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1600179327399" />
     <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599721055869">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599721055869" />
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600235132188">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1600235132188" />
     <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl" timestamp="1599721025249">
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl/72.27.2488.1413@72.27.2488.1413" timestamp="1599721025249" />
-    <state width="1345" height="45" key="GridCell.Tab.0.bottom" timestamp="1600160918871">
+    <state width="1345" height="248" key="GridCell.Tab.0.bottom" timestamp="1600254655621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="45" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600160918871" />
+    <state width="1345" height="248" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600254655621" />
     <state width="1313" height="99" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="45" key="GridCell.Tab.0.center" timestamp="1600160918869">
+    <state width="1345" height="248" key="GridCell.Tab.0.center" timestamp="1600254655621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="45" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600160918869" />
+    <state width="1345" height="248" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600254655621" />
     <state width="1313" height="99" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="45" key="GridCell.Tab.0.left" timestamp="1600160918868">
+    <state width="1345" height="248" key="GridCell.Tab.0.left" timestamp="1600254655621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="45" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600160918868" />
+    <state width="1345" height="248" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600254655621" />
     <state width="1313" height="99" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418300" />
-    <state width="1345" height="45" key="GridCell.Tab.0.right" timestamp="1600160918870">
+    <state width="1345" height="248" key="GridCell.Tab.0.right" timestamp="1600254655621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="45" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600160918870" />
+    <state width="1345" height="248" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600254655621" />
     <state width="1313" height="99" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
     <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog" timestamp="1599748835686">
       <screen x="72" y="27" width="2488" height="1413" />
@@ -173,10 +224,14 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="805" y="368" width="1022" height="737" key="SettingsEditor/72.27.2488.1413@72.27.2488.1413" timestamp="1599722022868" />
-    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600158620343">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1600162368843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1600158620343" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600162368843" />
+    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600177697604">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1600177697604" />
     <state x="172" y="127" width="1105" height="1208" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.2488.1413@72.27.2488.1413" timestamp="1599736035298" />
     <state x="969" y="351" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599831429453">
       <screen x="72" y="27" width="2488" height="1413" />

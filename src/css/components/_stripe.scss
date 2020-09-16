@@ -324,7 +324,6 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 
 .StripeElement--focus {
   box-shadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
-   
   z-index: 10;
 }
 
@@ -351,4 +350,13 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 // GPAY BUTTON
 .payment-request-button {
   box-shadow: none;
+}
+
+// SubmitButton
+.submit-disabled{
+  opacity: 0.7;
+}
+
+.SubmitButton--title__sending{
+  display: none;
 }

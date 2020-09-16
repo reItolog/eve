@@ -1,13 +1,13 @@
-.sh{
+.sh {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 
   @media (min-width: $bp-s) {
     padding-left: 2.5rem;
-    padding-right: 2.5rem;    
+    padding-right: 2.5rem;
   }
 
-  &__line{
+  &__line {
     top: -2.5rem;
     height: 0.25rem;
     background: $color-gradient-1;
@@ -16,7 +16,7 @@
     opacity: 0;
   }
 
-  &__btn{
+  &__btn {
 
     @media (min-width: $bp-s) {
       margin-top: 0.15rem;
@@ -36,7 +36,7 @@
 
     @media (max-width: $bp-s-max) {
 
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -54,7 +54,7 @@
       padding-bottom: 0.25rem;
     }
 
-    &__count{
+    &__count {
       opacity: 0.001;
       font-size: 0.65em;
       letter-spacing: 0.15em;
@@ -66,7 +66,7 @@
       }
     }
 
-    &__label{
+    &__label {
       display: block;
       letter-spacing: 0.04em;
       transition: color .35s ease;
@@ -78,12 +78,12 @@
 
       @media (hover: hover) {
 
-        &:hover{
+        &:hover {
           color: $color-purple;
         }
       }
 
-      svg{
+      svg {
         position: absolute;
         left: calc(100% + 0.25em);
         bottom: 60%;
@@ -94,13 +94,13 @@
   }
 }
 
-.site-logo{
+.site-logo {
 
-  img{
+  img {
     width: 2.5rem;
   }
 
-  svg{
+  svg {
     height: auto;
 
     &:nth-child(1) {
@@ -116,80 +116,95 @@
 
   #blog & {
 
-    svg{
+    svg {
 
       &:nth-child(2) {
         width: 1.5rem;
         margin-left: 1rem;
         opacity: 0.1;
-      }      
+      }
     }
   }
 }
 
 .payment_header_logo img {
-    width: 10.5rem;
+  width: 10.5rem;
 }
+
 .pea.grey_bg {
-    border: 1px solid #ccc;
-    padding: 3px 10px;
-    border-radius: 10px;
-    line-height: 24px;
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+  border-radius: 10px;
+  line-height: 24px;
 }
+
 .pea.grey_bg span {
-    font-weight: 600;
-    font-size: 18px;
+  font-weight: 600;
+  font-size: 18px;
 }
+
 .pea.purple_bg {
-    background: rgb(106,58,255);
-    background: linear-gradient(90deg, rgba(106,58,255,1) 0%, rgba(122,46,255,1) 52%, rgba(143,31,255,1) 100%);
-    padding: 5px 20px;
-    border-radius: 30px;
-    color: #fff;
-    line-height: 24px;
+  background: rgb(106, 58, 255);
+  background: linear-gradient(90deg, rgba(106, 58, 255, 1) 0%, rgba(122, 46, 255, 1) 52%, rgba(143, 31, 255, 1) 100%);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: #fff;
+  line-height: 24px;
 }
+
 #payment_top {
-    padding-top: 150px;
-    text-align: center;
+  padding-top: 170px;
+  text-align: center;
 }
+
 #payment_top h1 {
-    color: #37254F;
-    font-size: 35px;
-    margin-bottom: 35px;
-    width: 50%;
-    margin: 0px auto;
-    position: relative;
-	margin-bottom: 50px;
+  font-family: Abhaya Libre;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.131403px;
+  color: #200d3a;
+  width: 786px;
+  height: 186px;
+  margin: 0 auto;
 }
+
 #payment_top h1 span:after {
-    content: "";
-    position: absolute;
-    background: rgb(106,58,255);
-    background: linear-gradient(90deg, rgba(106,58,255,1) 0%, rgba(122,46,255,1) 52%, rgba(143,31,255,1) 100%);
-    width: 240px;
-    height: 5px;
-    left: 75px;
-    bottom: 0px;
+  content: "";
+  background: rgb(106, 58, 255);
+  background: linear-gradient(90deg, rgba(106, 58, 255, 1) 0%, rgba(122, 46, 255, 1) 52%, rgba(143, 31, 255, 1) 100%);
+  width: 240px;
+  height: 5px;
+  left: 75px;
+  bottom: 0px;
+
 }
+
 ul.payment_video_list {
-    margin-bottom: 40px;
-	display: block;
+  margin-bottom: 40px;
+  display: block;
 }
+
 ul.payment_video_list li {
-    display: inline-block;
-    text-align: center;
-    margin: 0px 20px;
+  display: inline-block;
+  text-align: center;
+  margin: 0px 20px;
 }
+
 ul.payment_video_list li .sm-link {
-    font-size: 14px;
+  font-size: 14px;
 }
+
 #read-faqs h2 {
-    text-align: center;
-    font-size: 26px;
-	margin-bottom: 30px;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
 }
+
 .faq_top_content {
-    text-align: center;
-    margin-bottom: 35px;
+  text-align: center;
+  margin-bottom: 35px;
 }
 

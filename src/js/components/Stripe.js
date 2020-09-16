@@ -6,7 +6,8 @@ export default class {
   cardCvcElement;
   cardExpiryElement;
   displayError;
-
+  submitButton;
+  isSending = false;
   stripe;
 
   style = {
@@ -34,6 +35,7 @@ export default class {
     this.cardExpiryElement = document.getElementById('card-expiry')
     this.cardCvcElement = document.getElementById('card-cvc')
     this.displayError = document.getElementById('card-errors')
+    this.submitButton = document.getElementById('SubmitButton')
     this.stripe = Stripe('pk_test_51HPO4FKrdDRwnIFxHCzsnj0JRYMGDz4wzEdpCYGMykoX4jxxBXv4MbcVlJWSLKQtElZdzShpgZ5UvS1C9mQGEmwg00u9uMNihW')
     this.elements = this.stripe.elements();
   }
@@ -110,7 +112,7 @@ export default class {
                 await this.createSubscription({
                   customerId: customer.id,
                   paymentMethodId: paymentMethod.id,
-                  priceId: 'price_1HQu0LKrdDRwnIFxUorRkb2J',
+                  priceId: 'price_1HRtUQKrdDRwnIFxrWFwC7xL',
                 })
               } catch (e) {
                 console.log(e)
@@ -195,6 +197,7 @@ export default class {
       const element = elements.create(type, {style: this.style});
 
       element.mount(domElement);
+
 
       element.on('change', (e) => {
         this.validationError(e.error)

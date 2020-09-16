@@ -10,11 +10,11 @@ title: Payment
 {% from "_macros/arrow.njk" import arrow %}
 {% from "_macros/arrow-small.njk" import arrowSmall %}
 {% from "_macros/_badge.njk" import badgeSVG %}
-<article data-router-view="default" id="payment" class="js-gl">
+<article data-router-view="default" id="payment" class="js-gl payment-article">
 
   {% include '_payment-header.njk' %}
 
-{#  {% include '_payment/_intro.njk' %}#}
+  {% include '_payment/_intro.njk' %}
   {% include '_payment/_stripe.njk' %}
   {% include '_payment-footer.njk' %}
 
