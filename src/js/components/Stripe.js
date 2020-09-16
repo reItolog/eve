@@ -1,7 +1,7 @@
 import {useFetch} from '@/utils/useFetch'
 
 export default class {
-  apiBaseUrl = 'http://localhost:4000';
+  apiBaseUrl = 'http://localhost:3000';
   cardNumberElement;
   cardCvcElement;
   cardExpiryElement;
@@ -85,12 +85,12 @@ export default class {
             return
           }
 
-          useFetch(`${this.apiBaseUrl}/payment/create-customer`, {email, name}, 'POST')
+          useFetch(`${this.apiBaseUrl}/payment/create-customer`, {email, name, country, zip}, 'POST')
             .then((data) => {
 
               return data;
             })
-            .then(async (customer) => {
+            .then(async ({customer}) => {
               try {
                 const {paymentMethod} = await this.stripe.createPaymentMethod({
                   type: 'card',
@@ -110,7 +110,7 @@ export default class {
                 await this.createSubscription({
                   customerId: customer.id,
                   paymentMethodId: paymentMethod.id,
-                  priceId: 'price_1HQu0LKrdDRwnIFxUorRkb2J',
+                  priceId: 'price_1HRtUQKrdDRwnIFxrWFwC7xL',
                 })
               } catch (e) {
                 console.log(e)
@@ -134,6 +134,7 @@ export default class {
       useFetch(`${this.apiBaseUrl}/payment/create-subscription`, {customerId, paymentMethodId, priceId}, 'POST')
         .then(result => {
           if (result.error) {
+
             // The card had an error when trying to attach it to a customer.
             throw result;
           }

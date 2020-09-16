@@ -11,7 +11,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 const PATHS = {
-  build: '/dist/',
+  build: '/dist/public/',
   src: path.join(__dirname, 'src')
 }
 
@@ -21,7 +21,7 @@ module.exports = {
     app: ['./js/app.js'],
   },
   output: {
-    publicPath: PATHS.build,
+    path: path.join(__dirname, 'dist', 'public'),
     filename: '[name].js',
     chunkFilename: '[name].js'
   },

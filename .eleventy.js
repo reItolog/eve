@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
       input: 'src', 
       data: '_data',
       includes: '_includes',
-      output: 'dist', 
+      output: 'dist/public',
     },
     passthroughFileCopy: true,
     templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
