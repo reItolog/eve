@@ -2,7 +2,7 @@ import {useFetch} from '@/utils/useFetch';
 import client from '../../utils/client';
 
 export default class {
-  apiBaseUrl = 'http://localhost:4000';
+  apiBaseUrl = 'http://localhost:3000';
   cardNumberElement;
   cardCvcElement;
   cardExpiryElement;
@@ -10,7 +10,7 @@ export default class {
 
   submitButton;
 
-  isSending= false;
+  isSending = false;
 
   stripe;
 
@@ -46,7 +46,6 @@ export default class {
 
   async stripeInit() {
     // PAYMENT REQUEST BUTTON
-
     const paymentRequest = await this.stripe.paymentRequest({
       country: 'US',
       currency: 'usd',
@@ -58,7 +57,6 @@ export default class {
       requestPayerEmail: true,
     });
     await this.createCardElement('paymentRequestButton', '#payment-request-button', paymentRequest)
-
 
     const cardNumber = this.createCardElement('cardNumber', '#card-number')
     this.createCardElement('cardExpiry', '#card-expiry')
@@ -73,7 +71,6 @@ export default class {
           const country = document.querySelector('select[name="billingCountry"]').value;
           const name = document.querySelector('input[name="name"]').value;
           const zip = document.querySelector('input[name="zip"]').value;
-
 
           const tokenData = {
             name,
@@ -92,93 +89,83 @@ export default class {
           }
           // DISABLED SUBMIT BUTTON for NO DOUBLE REQUEST
           this.submitButton.classList.add('SubmitButton__disabled');
-          this.submitButton.disable = true;
+          this.submitButton.disabled = true;
 
-          useFetch(`${this.apiBaseUrl}/payment/create-customer`, {email, name, country, zip}, 'POST')
-            .then((data) => {
+          try {
+            const {customer} = await useFetch(`${this.apiBaseUrl}/payment/create-customer`, {
+              email,
+              name,
+              country,
+              zip
+            }, 'POST');
 
-              return data;
-            })
-            .then(async ({customer}) => {
-              try {
-                const {paymentMethod} = await this.stripe.createPaymentMethod({
-                  type: 'card',
-                  card: {
-                    token: token.id
-                  },
-                  billing_details: {
-                    email: email,
-                    name: name,
-                    address: {
-                      country: country,
-                      postal_code: zip
-                    }
-                  },
-                });
-
-                await this.createSubscription({
-                  customerId: customer.id,
-                  paymentMethodId: paymentMethod.id,
-                  priceId: 'price_1HRtUQKrdDRwnIFxrWFwC7xL',
-                })
-              } catch (e) {
-                console.log(e)
-              }
-
-            })
-            .then(() => {
-              this.subscriptionSuccess()
-            })
-            .catch(e => {
-              console.log(e)
+            const {paymentMethod} = await this.stripe.createPaymentMethod({
+              type: 'card',
+              card: {
+                token: token.id
+              },
+              billing_details: {
+                email: email,
+                name: name,
+                address: {
+                  country: country,
+                  postal_code: zip
+                }
+              },
             });
+
+            const {subscription} = await this.createSubscription({
+              customerId: customer.id,
+              paymentMethodId: paymentMethod.id,
+              priceId: 'price_1HRtUQKrdDRwnIFxrWFwC7xL',
+            });
+
+            await this.createCustomer(subscription)
+
+            await this.subscriptionSuccess();
+          } catch (e) {
+            console.log(e)
+          }
         }
       )
     }
 
   }
 
-  createSubscription({customerId, paymentMethodId, priceId}) {
-    return (
-      useFetch(`${this.apiBaseUrl}/payment/create-subscription`, {customerId, paymentMethodId, priceId}, 'POST')
-        .then(result => {
-          if (result.error) {
+  async createSubscription({customerId, paymentMethodId, priceId}) {
+    try {
+      const {subscription} = await useFetch(`${this.apiBaseUrl}/payment/create-subscription`, {
+        customerId,
+        paymentMethodId,
+        priceId
+      }, 'POST');
 
-            // The card had an error when trying to attach it to a customer.
-            throw result;
-          }
-          return result;
-        })
-        .then(async (result) => {
-          const customerDoc = {
-            _type: 'customer',
-            customerId: result.customer,
-            subscriptionId: result.latest_invoice.subscription,
-            collection_method: result.collection_method,
-            productId: result.plan.product,
-            priceId: result.plan.id,
-            status: result.status
-          }
+      return {
+        paymentMethodId,
+        priceId,
+        subscription,
+      };
+    } catch (e) {
+      throw new Error(e)
+    }
+  }
 
+  async createCustomer(subscription) {
+    const customerDoc = {
+      _type: 'customer',
+      customerId: subscription.customer,
+      subscriptionId: subscription.latest_invoice.subscription,
+      collection_method: subscription.collection_method,
+      productId: subscription.plan.product,
+      priceId: subscription.plan.id,
+      status: subscription.status
+    }
 
-          try {
-            await client.create(customerDoc)
-          } catch (e) {
-            throw new Error(e.message)
-          }
-
-          return {
-            paymentMethodId: paymentMethodId,
-            priceId: priceId,
-            subscription: result,
-          };
-        })
-        .catch((error) => {
-          // An error has happened. Display the failure to the user here.
-          // We utilize the HTML element we created.
-          console.log(error)
-        })
-    )
+    try {
+      await client.create(customerDoc);
+    } catch (e) {
+      throw new Error(`Create Customer Error: ${e.message}`)
+    }
   }
 
   createCardElement(type, domElement, ...args) {
@@ -230,8 +217,9 @@ export default class {
     }
   }
 
-  subscriptionSuccess() {
-    alert('Success')
+  async subscriptionSuccess() {
+    console.log('Sub Success')
+    // alert('Success')
   }
 
   cardValidation(error) {

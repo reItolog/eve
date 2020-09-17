@@ -11,6 +11,7 @@ import authors from './documents/authors'
 import packages from './documents/packages'
 import testimonials from './documents/testimonials'
 import featured from './documents/featured'
+import customer from './documents/customer'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
     authors,
     packages,
     testimonials,
-    featured
+    featured,
+    customer
   ])
 })
