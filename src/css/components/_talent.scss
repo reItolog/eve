@@ -5,7 +5,7 @@
     letter-spacing: -0.05em;
     will-change: transform;
 
-    &__text{
+    &__text {
       color: $color-purple;
 
       .is-desktop & {
@@ -15,14 +15,39 @@
   }
 }
 
-.intro{
+.intro {
   margin-top: -150vh;
 
-  &__bg{
+  &__bg {
     opacity: 0;
   }
 
-  &__content{
+  &__content {
     padding-top: 150vh;
   }
+}
+
+.payment_header {
+  padding-top: 20px;
+}
+
+.intro-header__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-video {
+  position: relative;
+  padding: 36.25% 0 0 0;
+  margin-bottom: 40px;
+}
+
+.intro-mask {
+  position: absolute;
+  width: 100%;
+  height: 970px;
+  top: -200px;
+  bottom: 0;
+  background: url("/static/Mask.svg") no-repeat;
 }
