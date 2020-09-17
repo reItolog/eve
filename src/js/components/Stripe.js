@@ -1,11 +1,16 @@
-import {useFetch} from '@/utils/useFetch'
+import {useFetch} from '@/utils/useFetch';
+import client from '../../utils/client';
 
 export default class {
-  apiBaseUrl = 'http://localhost:3000';
+  apiBaseUrl = 'http://localhost:4000';
   cardNumberElement;
   cardCvcElement;
   cardExpiryElement;
   displayError;
+
+  submitButton;
+
+  isSending= false;
 
   stripe;
 
@@ -34,6 +39,7 @@ export default class {
     this.cardExpiryElement = document.getElementById('card-expiry')
     this.cardCvcElement = document.getElementById('card-cvc')
     this.displayError = document.getElementById('card-errors')
+    this.submitButton = document.querySelector('.SubmitButton')
     this.stripe = Stripe('pk_test_51HPO4FKrdDRwnIFxHCzsnj0JRYMGDz4wzEdpCYGMykoX4jxxBXv4MbcVlJWSLKQtElZdzShpgZ5UvS1C9mQGEmwg00u9uMNihW')
     this.elements = this.stripe.elements();
   }
@@ -51,12 +57,12 @@ export default class {
       requestPayerName: true,
       requestPayerEmail: true,
     });
-    const paymentRequestButton = await this.createCardElement('paymentRequestButton', '#payment-request-button', paymentRequest)
+    await this.createCardElement('paymentRequestButton', '#payment-request-button', paymentRequest)
 
 
     const cardNumber = this.createCardElement('cardNumber', '#card-number')
-    const cardExpiry = this.createCardElement('cardExpiry', '#card-expiry')
-    const cardCvc = this.createCardElement('cardCvc', '#card-cvc');
+    this.createCardElement('cardExpiry', '#card-expiry')
+    this.createCardElement('cardCvc', '#card-cvc');
 
     const form = document.getElementById('stripe-form');
     if (form) {
@@ -84,6 +90,9 @@ export default class {
           if (!token) {
             return
           }
+          // DISABLED SUBMIT BUTTON for NO DOUBLE REQUEST
+          this.submitButton.classList.add('SubmitButton__disabled');
+          this.submitButton.disable = true;
 
           useFetch(`${this.apiBaseUrl}/payment/create-customer`, {email, name, country, zip}, 'POST')
             .then((data) => {
@@ -140,7 +149,24 @@ export default class {
           }
           return result;
         })
-        .then((result) => {
+        .then(async (result) => {
+          const customerDoc = {
+            _type: 'customer',
+            customerId: result.customer,
+            subscriptionId: result.latest_invoice.subscription,
+            collection_method: result.collection_method,
+            productId: result.plan.product,
+            priceId: result.plan.id,
+            status: result.status
+          }
+
+
+          try {
+            await client.create(customerDoc)
+          } catch (e) {
+            throw new Error(e.message)
+          }
+
           return {
             paymentMethodId: paymentMethodId,
             priceId: priceId,

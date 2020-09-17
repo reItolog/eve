@@ -22,7 +22,6 @@ app.post('/payment/create-customer', async (req, res) => {
     const customer = await stripe.customers.create({
       email,
       name,
-      // Delete address or add lin1
       address: {
         line1: '',
         country,
@@ -41,16 +40,13 @@ app.post('/payment/create-customer', async (req, res) => {
 })
 
 app.post('/payment/create-subscription', async (req, res) => {
-    const {customerId, paymentMethodId, priceId} = req.body;
+  const {customerId, paymentMethodId, priceId} = req.body;
 
+  try {
     // Attach the payment method to the customer
-    try {
-      await stripe.paymentMethods.attach(paymentMethodId, {
-        customer: customerId,
-      });
-    } catch (error) {
-      return res.status(402).json({error});
-    }
+    await stripe.paymentMethods.attach(paymentMethodId, {
+      customer: customerId,
+    });
 
     // Change the default invoice settings on the customer to the new payment method
     await stripe.customers.update(customerId, {
@@ -63,12 +59,15 @@ app.post('/payment/create-subscription', async (req, res) => {
     const subscription = await stripe.subscriptions.create({
       customer: customerId,
       items: [{price: priceId}],
+      cancel_at_period_end: true, // Boolean indicating whether this subscription should cancel at the end of the current period.
       expand: ['latest_invoice.payment_intent'],
     });
 
     res.json({subscription})
+  } catch (error) {
+    return res.status(400).json({error});
   }
-)
+})
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)

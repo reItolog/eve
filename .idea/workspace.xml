@@ -16,17 +16,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="frontent for payment(start)">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eleventy.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eleventy.js" afterDir="false" />
+    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="add custom server">
+      <change afterPath="$PROJECT_DIR$/studio/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/_home/_pricing.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_home/_pricing.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/_stripe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/Stripe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Stripe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -133,8 +130,18 @@
       <workItem from="1600148073059" duration="561000" />
       <workItem from="1600148980003" duration="9811000" />
       <workItem from="1600268218492" duration="2700000" />
-      <workItem from="1600271068887" duration="7598000" />
+      <workItem from="1600271068887" duration="7718000" />
+      <workItem from="1600318680320" duration="4199000" />
+      <workItem from="1600327757261" duration="3632000" />
     </task>
+    <task id="LOCAL-00001" summary="add custom server">
+      <created>1600279909211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600279909211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +176,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add custom server" />
+    <option name="LAST_COMMIT_MESSAGE" value="add custom server" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599721055869">
       <screen x="72" y="27" width="2488" height="1413" />
@@ -178,25 +190,25 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl/72.27.2488.1413@72.27.2488.1413" timestamp="1599721025249" />
-    <state width="1345" height="119" key="GridCell.Tab.0.bottom" timestamp="1600278768907">
+    <state width="1345" height="47" key="GridCell.Tab.0.bottom" timestamp="1600331434558">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="119" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600278768907" />
+    <state width="1345" height="47" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600331434558" />
     <state width="1313" height="99" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="119" key="GridCell.Tab.0.center" timestamp="1600278768899">
+    <state width="1345" height="47" key="GridCell.Tab.0.center" timestamp="1600331434556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="119" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600278768899" />
+    <state width="1345" height="47" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600331434556" />
     <state width="1313" height="99" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="119" key="GridCell.Tab.0.left" timestamp="1600278768899">
+    <state width="1345" height="47" key="GridCell.Tab.0.left" timestamp="1600331434554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="119" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600278768899" />
+    <state width="1345" height="47" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600331434554" />
     <state width="1313" height="99" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418300" />
-    <state width="1345" height="119" key="GridCell.Tab.0.right" timestamp="1600278768899">
+    <state width="1345" height="47" key="GridCell.Tab.0.right" timestamp="1600331434557">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="119" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600278768899" />
+    <state width="1345" height="47" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600331434557" />
     <state width="1313" height="99" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
     <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog" timestamp="1599748835686">
       <screen x="72" y="27" width="2488" height="1413" />
@@ -206,6 +218,10 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="805" y="368" width="1022" height="737" key="SettingsEditor/72.27.2488.1413@72.27.2488.1413" timestamp="1599722022868" />
+    <state x="275" y="78" key="Vcs.Push.Dialog.v2" timestamp="1600279917250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="78" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600279917250" />
     <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600158620343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
