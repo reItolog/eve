@@ -16,15 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="san customer">
-      <change afterPath="$PROJECT_DIR$/static/Mask.svg" afterDir="false" />
+    <list default="true" id="c7679732-9302-4373-a4d2-89f5251afddb" name="Default Changelist" comment="css bg top">
+      <change afterPath="$PROJECT_DIR$/static/payman.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/_payment-header.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment-header.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lightserverrc" beforeDir="false" afterPath="$PROJECT_DIR$/.lightserverrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/_payment/_intro.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/components/_head.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_head.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/components/_stripe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_stripe.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/_hiw.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_hiw.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/components/_talent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/_talent.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Mask.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/Mask.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <recent name="$PROJECT_DIR$/src/js/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.express:dev">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -105,10 +105,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.serve" />
+        <item itemvalue="npm.express:dev" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.eleventy:watch" />
-        <item itemvalue="npm.express:dev" />
-        <item itemvalue="npm.serve" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +134,9 @@
       <workItem from="1600268218492" duration="2700000" />
       <workItem from="1600271068887" duration="7718000" />
       <workItem from="1600318680320" duration="4199000" />
-      <workItem from="1600327757261" duration="34788000" />
+      <workItem from="1600327757261" duration="34864000" />
+      <workItem from="1600406976490" duration="2278000" />
+      <workItem from="1600419161111" duration="20810000" />
     </task>
     <task id="LOCAL-00001" summary="add custom server">
       <created>1600279909211</created>
@@ -157,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600339678369</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="css bg top">
+      <created>1600366836961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600366836961</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +206,8 @@
     <MESSAGE value="add custom server" />
     <MESSAGE value="add customer after subscription" />
     <MESSAGE value="san customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="san customer" />
+    <MESSAGE value="css bg top" />
+    <option name="LAST_COMMIT_MESSAGE" value="css bg top" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1057" y="605" width="508" height="264" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599721055869">
@@ -208,25 +218,25 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="1060" y="477" width="501" height="520" key="FileChooserDialogImpl/72.27.2488.1413@72.27.2488.1413" timestamp="1599721025249" />
-    <state width="1345" height="177" key="GridCell.Tab.0.bottom" timestamp="1600366677258">
+    <state width="1345" height="60" key="GridCell.Tab.0.bottom" timestamp="1600440508012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600366677258" />
+    <state width="1345" height="60" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600440508012" />
     <state width="1313" height="99" key="GridCell.Tab.0.bottom/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="177" key="GridCell.Tab.0.center" timestamp="1600366677250">
+    <state width="1345" height="60" key="GridCell.Tab.0.center" timestamp="1600440508009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600366677250" />
+    <state width="1345" height="60" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600440508009" />
     <state width="1313" height="99" key="GridCell.Tab.0.center/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
-    <state width="1345" height="177" key="GridCell.Tab.0.left" timestamp="1600366677250">
+    <state width="1345" height="60" key="GridCell.Tab.0.left" timestamp="1600440508009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600366677250" />
+    <state width="1345" height="60" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600440508009" />
     <state width="1313" height="99" key="GridCell.Tab.0.left/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418300" />
-    <state width="1345" height="177" key="GridCell.Tab.0.right" timestamp="1600366677250">
+    <state width="1345" height="60" key="GridCell.Tab.0.right" timestamp="1600440508009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600366677250" />
+    <state width="1345" height="60" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600440508009" />
     <state width="1313" height="99" key="GridCell.Tab.0.right/72.27.2488.1413@72.27.2488.1413" timestamp="1600094418301" />
     <state x="563" y="352" width="360" height="765" key="RollbackChangesDialog" timestamp="1599748835686">
       <screen x="72" y="27" width="2488" height="1413" />
@@ -236,10 +246,10 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="805" y="368" width="1022" height="737" key="SettingsEditor/72.27.2488.1413@72.27.2488.1413" timestamp="1599722022868" />
-    <state x="275" y="78" key="Vcs.Push.Dialog.v2" timestamp="1600339710984">
+    <state x="275" y="78" key="Vcs.Push.Dialog.v2" timestamp="1600366842429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="78" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600339710984" />
+    <state x="275" y="78" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600366842429" />
     <state x="55" y="52" width="607" height="623" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600158620343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -253,9 +263,10 @@
       <screen x="72" y="27" width="2488" height="1413" />
     </state>
     <state x="980" y="342" key="run.anything.popup/72.27.2488.1413@72.27.2488.1413" timestamp="1599830642913" />
-    <state x="1601" y="349" width="672" height="678" key="search.everywhere.popup" timestamp="1599579279112">
-      <screen x="72" y="27" width="2488" height="1413" />
+    <state x="839" y="166" width="672" height="350" key="search.everywhere.popup" timestamp="1600427254728">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="839" y="166" width="672" height="350" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600427254728" />
     <state x="1601" y="349" width="672" height="678" key="search.everywhere.popup/72.27.2488.1413@72.27.2488.1413" timestamp="1599579279112" />
   </component>
 </project>

@@ -1,36 +1,37 @@
-.hiw{
+.hiw {
 
-  &-nav{
+  &-nav {
+    position: relative;
 
     .is-device & {
       display: none;
     }
 
-    svg{
+    svg {
       width: 100%;
       height: 100%;
     }
 
-    &-list{
+    &-list {
       border-radius: calc(var(--col) * 0.5);
       padding: 1.65rem 0 1rem;
 
-      &__btn{
+      &__btn {
         padding: 0 0.7rem;
 
-        img{
+        img {
 
-          &:last-child{
+          &:last-child {
             transition: opacity .35s ease;
             opacity: 0;
           }
         }
 
-        &.is-active{
+        &.is-active {
 
-          img{
+          img {
 
-            &:last-child{
+            &:last-child {
               opacity: 1;
             }
           }
@@ -39,14 +40,14 @@
     }
   }
 
-  &-content{
+  &-content {
 
-    p{
+    p {
       top: 100%;
     }
   }
 
-  &__canvas{
+  &__canvas {
     padding-top: 125%;
 
     @media (min-width: $bp-s) {
@@ -54,7 +55,7 @@
     }
   }
 
-  &__bm{
+  &__bm {
     will-change: transform;
 
     @media (max-width: $bp-s-max) {
@@ -62,46 +63,46 @@
       left: 0;
       width: 100%;
       height: 100%;
-      transform: scale(1.75);     
+      transform: scale(1.75);
     }
 
     @media (min-width: $bp-s) {
 
-      &--1{
+      &--1 {
         bottom: 15.5%;
         left: -6.5%;
         width: 200%;
       }
-  
-      &--2{
+
+      &--2 {
         width: 175%;
         height: 175%;
         left: -120%;
         top: -95%;
       }
-  
-      &--7{
+
+      &--7 {
         bottom: 14%;
         left: -8%;
         width: 210%;
         height: 200%;
       }
-  
-      &--8{
+
+      &--8 {
         width: 225%;
         height: 200%;
         left: -135%;
-        top: -125%;      
+        top: -125%;
       }
-  
-      &--9{
+
+      &--9 {
         width: 200%;
         height: 200%;
         left: 0.2%;
-        top: -108.5%;   
+        top: -108.5%;
       }
-  
-      &--slide{
+
+      &--slide {
         top: 50%;
         left: 50%;
         width: 200%;

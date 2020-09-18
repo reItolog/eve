@@ -28,26 +28,153 @@
 }
 
 .payment_header {
-  padding-top: 20px;
+  padding: 10px 82px;
 }
 
 .intro-header__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3rem;
 }
 
 .intro-video {
   position: relative;
-  padding: 36.25% 0 0 0;
-  margin-bottom: 40px;
+  padding: 30.25% 0 0;
+  margin-bottom: 2.4rem;
 }
 
 .intro-mask {
   position: absolute;
   width: 100%;
-  height: 970px;
+  height: 900px;
   top: -200px;
   bottom: 0;
-  background: url("/static/Mask.svg") no-repeat;
+  background-image: url("/static/Mask.svg");
+  background-repeat: no-repeat;
+}
+
+.intro--hiv {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+
+  img {
+    position: relative;
+  }
+}
+
+.faq_wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.inner_wrapper {
+  font-family: Abhaya Libre;
+  padding: 4% 10%;
+  text-align: left;
+
+  h3 {
+    position: relative;
+    color: #683cff;
+    font-size: 1.4rem;
+    letter-spacing: .07px;
+    line-height: 3rem;
+    margin-bottom: 5%;
+
+    &::before {
+      content: 'Q';
+      position: absolute;
+      left: -7%;
+      color: grey;
+      opacity: 0.6;
+    }
+  }
+
+  p {
+    position: relative;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #200D3A;
+
+    &::before {
+      content: 'A';
+      position: absolute;
+      left: -7%;
+      color: grey;
+      opacity: 0.6;
+    }
+  }
+
+  .small_text {
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.503232px;
+    color: #200D3A;
+    opacity: 0.49;
+    margin-top: 5%;
+
+    &::before {
+      content: none;
+    }
+  }
+
+}
+
+.accent-text {
+  color: #683cff;
+}
+
+.faq_col {
+  position: relative;
+  margin: 1rem;
+  width: 440px;
+  background: #FFFFFF;
+}
+
+.faq_col.x.rel.mha img {
+  position: relative;
+  height: 200px;
+}
+
+.faq_left {
+  .faq_col {
+    border-radius: 17px 45px 45px 45px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(136.75deg, #6042FF 15.78%, rgba(182, 1, 255, 0.485058) 83.53%);
+      left: -10%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.faq_right {
+  .faq_col {
+    border-radius: 45px 16px 45px 45px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(136.75deg, #6042FF 15.78%, rgba(182, 1, 255, 0.485058) 83.53%);
+      right: -10%;
+      top: 0;
+      border-radius: 50%;
+    }
+  }
+}
+
+.faq_col__img {
+  overflow: hidden;
+  border-radius: 45px 16px 0 0;
 }

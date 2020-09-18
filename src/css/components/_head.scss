@@ -151,7 +151,7 @@
 
 .pea.grey_bg span {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .pea.purple_bg {
@@ -159,7 +159,7 @@
   height: 36px;
   color: #f2f1f8;
   font-family: "Beausite Classic - Medium";
-  font-size: 13px;
+  font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.6px;
   line-height: 36px;
@@ -169,18 +169,19 @@
 }
 
 #payment_top {
-  padding-top: 100px;
+  padding-top: 80px;
   text-align: center;
+  margin-bottom: 9.8rem;
 }
 
 #payment_top h1 {
   color: #37254f;
   margin: 0 auto 90px;
-  width: 60%;
+  width: 50%;
   position: relative;
   font-family: Abhaya Libre;
-  font-size: 38px;
-  line-height: 48px;
+  font-size: 2.8rem;
+  line-height: 3.8rem;
   text-align: center;
 }
 
@@ -207,17 +208,24 @@ ul.payment_video_list li {
 }
 
 ul.payment_video_list li .sm-link {
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 #read-faqs h2 {
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 30px;
+  font-size: 2.1rem;
+  margin-bottom: 3rem;
 }
 
 .faq_top_content {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 5rem;
+
+  p {
+    font-size: 1.3rem;
+    margin: 0 auto;
+    width: 40%;
+    line-height: 3rem;
+  }
 }
 
