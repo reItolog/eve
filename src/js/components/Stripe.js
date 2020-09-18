@@ -199,7 +199,7 @@ export default class {
           if (result) {
             prButton.mount(domElement);
           } else {
-            document.getElementById('payment-request-button').style.display = 'none';
+            // document.getElementById('payment-request-button').style.display = 'none';
           }
         });
 

@@ -172,6 +172,9 @@
   padding-top: 80px;
   text-align: center;
   margin-bottom: 9.8rem;
+  @media (max-width: 420px) {
+    padding-top: 20px;
+  }
 }
 
 #payment_top h1 {
@@ -183,6 +186,12 @@
   font-size: 2.8rem;
   line-height: 3.8rem;
   text-align: center;
+  @media (max-width: 420px) {
+    width: 80%;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    margin: 40px auto 30px;
+  }
 }
 
 #payment_top h1 span:after {
@@ -191,14 +200,21 @@
   background: rgb(106, 58, 255);
   background: linear-gradient(90deg, rgba(106, 58, 255, 1) 0%, rgba(122, 46, 255, 1) 52%, rgba(143, 31, 255, 1) 100%);
   width: 240px;
-  height: 5px;
+  height: 2px;
   left: 75px;
   bottom: 0px;
+  @media (max-width: 420px) {
+    width: 60px;
+    left: 42px;
+  }
 }
 
 ul.payment_video_list {
   margin-bottom: 40px;
   display: block;
+  @media (max-width: 420px) {
+    display: none;
+  }
 }
 
 ul.payment_video_list li {

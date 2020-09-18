@@ -2,6 +2,7 @@ $borderRadius: 6px;
 $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
 
 .App-Overview, .App-Payment {
+  font-family: Abhaya Libre;
   position: relative;
   padding: 0 16px 16px;
   width: 50%;
@@ -62,10 +63,14 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 
 .overview-title {
   text-align: left;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
+  margin-top: 4%;
 
   span {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    padding-left: 10px;
   }
 }
 
