@@ -66,11 +66,16 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   margin-bottom: 8%;
   margin-top: 4%;
 
-  span {
-    font-weight: 700;
+  .payment-price {
+    font-weight: 900;
     font-size: 2.4rem;
     letter-spacing: 0.1rem;
     padding-left: 10px;
+    @media (max-width: $bp-xs) {
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      padding-left: 0;
+    }
   }
 }
 
@@ -143,6 +148,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 }
 
 .FormFieldLabel {
+  text-align: left;
   color: rgba(26, 26, 26, .7);
   font-weight: 500;
   margin-bottom: 5px;

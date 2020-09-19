@@ -172,8 +172,9 @@
   padding-top: 80px;
   text-align: center;
   margin-bottom: 9.8rem;
-  @media (max-width: 420px) {
-    padding-top: 20px;
+  @media (max-width: $bp-xxs) {
+    padding-top: 45px;
+    margin-bottom: 3.8rem;
   }
 }
 
@@ -185,8 +186,9 @@
   font-family: Abhaya Libre;
   font-size: 2.8rem;
   line-height: 3.8rem;
+  font-weight: 600;
   text-align: center;
-  @media (max-width: 420px) {
+  @media (max-width: $bp-xxs) {
     width: 80%;
     font-size: 1.9rem;
     line-height: 2.8rem;
@@ -203,7 +205,7 @@
   height: 2px;
   left: 75px;
   bottom: 0px;
-  @media (max-width: 420px) {
+  @media (max-width: $bp-xxs) {
     width: 60px;
     left: 42px;
   }
@@ -212,7 +214,7 @@
 ul.payment_video_list {
   margin-bottom: 40px;
   display: block;
-  @media (max-width: 420px) {
+  @media (max-width: $bp-xxs) {
     display: none;
   }
 }
@@ -231,17 +233,36 @@ ul.payment_video_list li .sm-link {
   text-align: center;
   font-size: 2.1rem;
   margin-bottom: 3rem;
+  @media (max-width: $bp-xxs) {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .faq_top_content {
   text-align: center;
   margin-bottom: 5rem;
 
+  @media (max-width: $bp-xxs) {
+    margin-bottom: 7rem;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
   p {
     font-size: 1.3rem;
     margin: 0 auto;
     width: 40%;
+    font-weight: 400;
     line-height: 3rem;
+    @media (max-width: $bp-xxs) {
+      font-size: 1.1rem;
+      width: 100%;
+      margin-bottom: 2rem;
+      line-height: 2.2rem;
+    }
   }
 }
 
