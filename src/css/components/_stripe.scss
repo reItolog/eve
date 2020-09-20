@@ -1,13 +1,13 @@
 $borderRadius: 6px;
-$boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
+$boxShadow: 0 0 0 1px rgba(50, 151, 211, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.07),
+  0 0 0 4px rgba(50, 151, 211, 0.3);
 
-.App-Overview, .App-Payment {
+.App-Overview,
+.App-Payment {
   font-family: Abhaya Libre;
   position: relative;
-  padding: 0 16px 16px;
   width: 50%;
-  flex: 2;
-  flex-basis: 300px;
+  flex-basis: 340px;
 }
 
 .App-Footer {
@@ -17,7 +17,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   margin: 12px 0;
 
   span {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   @media (max-width: $bp-xs) {
@@ -31,15 +31,19 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 }
 
 .Text-color--gray400 {
-  color: rgba(26, 26, 26, .5);
+  color: rgba(26, 26, 26, 0.5);
 }
 
 .Footer-PoweredBy {
   @media (min-width: 992px) {
     padding: 0 16px 0 0;
-    border-right: 1px solid rgba(26, 26, 26, .1);
+    border-right: 1px solid rgba(26, 26, 26, 0.1);
     width: auto;
     text-align: left;
+  }
+
+  @media (max-width: $bp-xxs) {
+    text-align: center;
   }
 }
 
@@ -51,7 +55,6 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   @media (max-width: $bp-xs) {
     text-align: center;
   }
-
 }
 
 //Preview Section
@@ -106,7 +109,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   &::before,
   &::after {
     display: inline-block;
-    content: "";
+    content: '';
     border-top: 1px solid grey;
     flex: 1;
   }
@@ -120,24 +123,28 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   }
 }
 
-.strip {
+.stripe {
+  margin-top: -100px;
+}
+
+.stripe__content {
   background: white;
 }
 
-.strip-form {
+.stripe-form {
   font-size: 1.5em;
   text-align: left;
 }
 
 .app-payment {
+  position: relative;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto;
-  max-width: 1100px;
+  // margin: 0 auto;
+  // max-width: 1020px;
 }
-
 
 .FormFieldInput {
   position: relative;
@@ -148,8 +155,9 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 }
 
 .FormFieldLabel {
+  font-size: 1rem;
   text-align: left;
-  color: rgba(26, 26, 26, .7);
+  color: rgba(26, 26, 26, 0.7);
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -157,15 +165,17 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 .CheckoutInput {
   position: relative;
   width: 100%;
-  height: 44px;
+  height: 35px;
   padding: 8px 12px;
-  color: rgba(26, 26, 26, .9);
+  color: rgba(26, 26, 26, 0.9);
   font-size: 16px;
   line-height: 1.5;
   border: 0;
   border-radius: $borderRadius;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
-  transition: box-shadow .08s ease-in, color .08s ease-in, -webkit-filter 50000s;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
+    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.08s ease-in, color 0.08s ease-in,
+    -webkit-filter 50000s;
   background: #fff;
   appearance: none;
 
@@ -179,19 +189,20 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   background: #593bb7;
   position: relative;
   overflow: hidden;
-  height: 44px;
+  height: 40px;
   width: 100%;
+  font-size: 1rem;
   margin-top: 12px;
   padding: 0;
   color: #fff;
-  box-shadow: inset 0 0 0 1px rgba(50, 50, 93, .1), 0 2px 5px 0 rgba(50, 50, 93, .1), 0 1px 1px 0 rgba(0, 0, 0, .07);
+  box-shadow: inset 0 0 0 1px rgba(50, 50, 93, 0.1),
+    0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.07);
   border: 0;
   outline: none;
   border-radius: $borderRadius;
   cursor: pointer;
-  transition: all .2s ease, box-shadow .08s ease-in;
+  transition: all 0.2s ease, box-shadow 0.08s ease-in;
   backface-visibility: hidden;
-
 }
 
 .SubmitButton__disabled {
@@ -203,9 +214,9 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 .CardInformation-content {
   display: flex;
   flex-flow: row wrap;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
+    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
   border-radius: $borderRadius;
-
 }
 
 .cardNumberContainer {
@@ -238,7 +249,7 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
     height: 21px;
     @media (max-width: $bp-xs) {
       width: 15px;
-      height: 11px
+      height: 11px;
     }
   }
 }
@@ -248,16 +259,15 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   height: 21px;
   @media (max-width: $bp-xs) {
     width: 15px;
-    height: 11px
+    height: 11px;
   }
 }
-
 
 // SELECT COUNTRY
 .countryContainer {
   border-radius: $borderRadius;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
-
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
+    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
 }
 
 .zip-field {
@@ -277,12 +287,14 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   height: 44px;
   font-size: 16px;
   padding: 8px 24px 8px 12px;
-  color: rgba(26, 26, 26, .9);
+  color: rgba(26, 26, 26, 0.9);
   line-height: 1.5;
   border: 0;
   background-color: #fff;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
-  transition: box-shadow .08s ease-in, color .08s ease-in, filter 50000s, -webkit-filter 50000s;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
+    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.08s ease-in, color 0.08s ease-in, filter 50000s,
+    -webkit-filter 50000s;
   appearance: none;
   outline: none;
 
@@ -300,7 +312,6 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
   width: 12px;
   height: 12px;
   z-index: 3;
-
 }
 
 /**
@@ -310,10 +321,11 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 .StripeElement {
   position: relative;
   box-sizing: border-box;
-  height: 40px;
+  height: 35px;
   width: 100%;
   padding: 10px 12px;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, .07), 0 1px 1.5px 0 rgba(0, 0, 0, .05);
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07),
+    0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
 }
 
 .ElementsApp input {
@@ -339,7 +351,8 @@ $boxShadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 
 }
 
 .StripeElement--focus {
-  box-shadow: 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
+  box-shadow: 0 0 0 1px rgba(50, 151, 211, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.07),
+    0 0 0 4px rgba(50, 151, 211, 0.3);
 
   z-index: 10;
 }
