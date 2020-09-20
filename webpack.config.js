@@ -6,6 +6,7 @@
 const path = require('path')
 const glob = require('glob-all')
 const webpack = require('webpack')
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
@@ -99,6 +100,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'src', 'server.js'), to: 'dist' },
+      ],
     }),
     new PurgecssPlugin({
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
